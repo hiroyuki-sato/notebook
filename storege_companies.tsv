@@ -4,18 +4,18 @@ Apeiron
 Auspex Systems	NetApp
 Blue Arc	Hitachi Data Systems
 Compaq	HP
-Dell	
-DDN	
-DSSD	EMC
 Data General	EMC
+DDN	
+Dell	
+DSSD	EMC
 E8	
 EMC	Dell
 EqualLogic	Dell
 Exanet	Dell
 Excelero	
 Fujitsu	
-HP	
 Hitachi	
+HP	
 Huawei	
 IBM	
 Infinidat	
@@ -24,14 +24,16 @@ Kaminario
 Lefthand	HP
 NetApp	
 Ocarina Networks	Dell
+Oracle
 Panasas	
 Pavilion Data Systems	
 Pure Storage	
 Qumulo	
 Reduxio	
 SolidFire	NetApp
-StorOne	
 StoreCentric	
+StorOne	
+Sun Microsystems	Oracle
 Toshiba Memory America(TMA)	
 VAST Data array	
 Violin Systems	
