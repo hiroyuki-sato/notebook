@@ -6,6 +6,7 @@ Blue Arc	Hitachi Data Systems
 Compaq	HP
 Data General	EMC
 DDN	
+DEC	HP
 Dell	
 DSSD	EMC
 E8	
@@ -14,6 +15,7 @@ EqualLogic	Dell
 Exanet	Dell
 Excelero	
 Fujitsu	
+GlueSys	
 Hitachi	
 HP	
 Huawei	
@@ -22,15 +24,19 @@ Infinidat
 Isilon	EMC
 Kaminario	
 Lefthand	HP
+NEC	
 NetApp	
 Ocarina Networks	Dell
+ONStor	LSI -> NetApp
 Oracle
 Panasas	
 Pavilion Data Systems	
+Procom Technology	Sun Microsystems
 Pure Storage	
 Qumulo	
 Reduxio	
 SolidFire	NetApp
+Spinnaker Networks	NetApp
 StoreCentric	
 StorOne	
 Sun Microsystems	Oracle
