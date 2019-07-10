@@ -18,11 +18,13 @@ EqualLogic	Dell
 Exanet	Dell
 Excelero	
 Fujitsu	
+Fusion-io	Samsung
 GlueSys	
 Hitachi	
 HP	
 Huawei	
 IBM	
+ID7	Fusion-io
 Infinidat	
 Isilon	EMC
 Kaminario	
@@ -40,6 +42,7 @@ Procom Technology	Sun Microsystems
 Pure Storage	
 Qumulo	
 Reduxio	
+Samsung	Western Digital
 ScaleIO	EMC
 SolidFire	NetApp
 Spinnaker Networks	NetApp
