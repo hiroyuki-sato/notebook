@@ -30,6 +30,7 @@
   * [IEC 61300-3-35:2015](https://webstore.iec.ch/publication/22763) 光ファイバコネクタプラグ及び 光トランシーバのファイバスタブの端面外観検査c)
   * [61300シリーズIEC/JIS対比一覧表](http://www.oitda.or.jp/main/st/61300/61300_170406.pdf)
 
+* [レセプタクル形光トランシーバの光コネクタ端面清掃に関するガイドライン](http://www.oitda.or.jp/main/st/TP12-2.pdf)
 
 * ケーブルテスト用語
   * Tier1(必須)/Tier2(拡張): TIAのテスト用語
