@@ -1,21 +1,21 @@
 Company Name	Acquired by
 3PAR INC	HP
+ATTALA Systems
 Amplidata	Western Digital
 Apeiron	
-ATTALA Systems
 Auspex Systems	NetApp
 Blue Arc	Hitachi Data Systems
 COHESITY	
 Compaq	HP
-Data General	EMC
 DATERA	
 DDN	
 DEC	HP
-Dell	
 DSSD	EMC
+Data General	EMC
+Dell	
 E8	
-Elastifile	Google
 EMC	Dell
+Elastifile	Google
 EqualLogic	Dell
 Exanet	Dell
 Excelero	
@@ -23,8 +23,8 @@ Fujitsu
 Fusion-io	SanDisk
 GlueSys	
 HGST	Western Digital
-Hitachi	
 HP	
+Hitachi	
 Huawei	
 IBM	
 ID7	Fusion-io
@@ -34,10 +34,10 @@ Kaminario
 Lefthand	HP
 Likewise	EMC
 NEC	
-NetApp	
 NUTANIX	
-Ocarina Networks	Dell
+NetApp	
 ONStor	LSI -> NetApp
+Ocarina Networks	Dell
 Oracle	
 Panasas	
 Pavilion Data Systems	
@@ -50,10 +50,9 @@ SanDisk	Western Digital
 ScaleIO	EMC
 SolidFire	NetApp
 Spinnaker Networks	NetApp
-sTec	Western Digital
-StoreCentric	
 StorOne	
 StorPool Storage	
+StoreCentric	
 Sun Microsystems	Oracle
 Tegile Systems	Western Digital
 Tintri	DDN
@@ -63,7 +62,9 @@ VAST Data array
 Vexata
 Violin Systems	
 Virident Systems	HGST
+Wasabi Technologies	
 WekaIO	
 Western Digital	
 XIV	IBM
 XtreamIO	EMC
+sTec	Western Digital
