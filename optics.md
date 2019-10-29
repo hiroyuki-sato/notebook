@@ -66,3 +66,9 @@
   * コメント: 光ファイバ通信の第7版
   * https://www.elsevier.com/books/optical-fiber-telecommunications-vii/willner/978-0-12-816502-7
 
+## Web
+
+* [LIGHTWAVE](https://www.lightwaveonline.com)
+* [福田昭のデバイス通信: imecが語る最新のシリコンフォトニクス技術](2019_imec_si_photo.md)のメモ
+
+
