@@ -73,6 +73,7 @@
 * [LIGHTWAVE](https://www.lightwaveonline.com)
 * [福田昭のデバイス通信: imecが語る最新のシリコンフォトニクス技術](2019_imec_si_photo.md)のメモ
 * [OpenTransceiver Slack](https://transceiver.slack.com/join/shared_invite/enQtNTU0MjE2MzMxNjY3LWZlYjA1ZGVlZjNhMjU0NGVhZmUyYmIwNjk0MWExNjI0NjU2YjJkMDRmMGFhM2MyYTMyNDY3NTJkMWJkYTI5OGU) トランシーバ関連の技術交流Slack
+* [WaveSplitter Japan Inc. 技術コラム](http://www.wavesplitter.jp/index.php/191)
 
 
 ## 展示会
@@ -86,6 +87,11 @@
 
 * 海外
   * OFC: [The Optical Networking and Communication Conference & Exhibition](https://www.ofcconference.org/en-us/home/)
+
+## 団体
+
+* [BICSI](https://www.bicsi.org) 1974年に設立された情報配線システムの設計・施工に関する非営利の教育機関
+* [BICSI JAPAN](https://www.bicsi.jp) BICSIの日本支部
 
 ## その他
 
