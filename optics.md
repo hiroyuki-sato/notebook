@@ -88,10 +88,12 @@
 * 海外
   * OFC: [The Optical Networking and Communication Conference & Exhibition](https://www.ofcconference.org/en-us/home/)
 
-## 団体
+## 大学・団体
 
 * [BICSI](https://www.bicsi.org) 1974年に設立された情報配線システムの設計・施工に関する非営利の教育機関
 * [BICSI JAPAN](https://www.bicsi.jp) BICSIの日本支部
+* 東北大学[微小光学 [山田・松田(信)] 研究室](https://www.ecei.tohoku.ac.jp/ecei_web/Laboratory/yamada_j_index.html)
+  * [山田 博仁教授講義資料](http://www5a.biglobe.ne.jp/~babe/) (ShiftJIS)
 
 ## その他
 
