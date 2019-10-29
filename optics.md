@@ -72,3 +72,14 @@
 * [福田昭のデバイス通信: imecが語る最新のシリコンフォトニクス技術](2019_imec_si_photo.md)のメモ
 
 
+## 展示会
+
+* 国内
+
+  * [ケーブル技術ショー](https://www.catv-f.com/outline/)
+    * [2019訪問記](https://twitter.com/hiroysato/status/1141249541515010048?s=20)
+  * FOE: [光通信技術展](https://www.foe.jp/ja-jp.html)
+    * [2019 春訪問記](https://twitter.com/hiroysato/status/1151843319305011200?s=20)
+
+* 海外
+  * OFC: [The Optical Networking and Communication Conference & Exhibition](https://www.ofcconference.org/en-us/home/)
