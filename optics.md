@@ -70,6 +70,7 @@
 
 * [LIGHTWAVE](https://www.lightwaveonline.com)
 * [福田昭のデバイス通信: imecが語る最新のシリコンフォトニクス技術](2019_imec_si_photo.md)のメモ
+* [OpenTransceiver Slack](https://transceiver.slack.com/join/shared_invite/enQtNTU0MjE2MzMxNjY3LWZlYjA1ZGVlZjNhMjU0NGVhZmUyYmIwNjk0MWExNjI0NjU2YjJkMDRmMGFhM2MyYTMyNDY3NTJkMWJkYTI5OGU) トランシーバ関連の技術交流Slack
 
 
 ## 展示会
@@ -83,3 +84,8 @@
 
 * 海外
   * OFC: [The Optical Networking and Communication Conference & Exhibition](https://www.ofcconference.org/en-us/home/)
+
+## その他
+
+* [用語集的ななにか](cabling.md)
+* [トランシーバとか光の個人ツイート](https://twitter.com/hiroysato/status/1093468464201617408?s=20)
