@@ -65,6 +65,7 @@
 
 ![](images/sff-8639.png)
 
+![](images/sff-8639_2.png)
 
 ## SFF-8621
 
