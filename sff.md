@@ -2,12 +2,18 @@
 
 [SFF Specifications](https://www.snia.org/technology-communities/sff/specifications)
 
+
+| No          | Title                                                        | Type       |
+|-------------|--------------------------------------------------------------|------------|
+| SFF-TA-1001 | Universal x4 Link Definition for SFF-8639 (a.k.a: U.2?)      |            |
+
 | No       | Title                                                        | Type       |
 |----------|--------------------------------------------------------------|------------|
 | SFF-9402 | Multi-Protocol Internal Cable Pinouts for SAS and/or PCIe    |            |
 | SFF-8654 | 0.6mm 4/8X Unshielded I/O Connector                          |            |
 | SFF-8644 | Mini Multilane 4/8X 12 Gb/s Shielded Cage/Connector (HD12sh) | Assembly   |
 | SFF-8643 | Mini Multilane 4/8X 12 Gb/s Unshielded Connector (HD12un)    | Assembly   |
+| SFF-8639 | Multifunction 6X Unshielded Connector (a.k.a. U.2            | Assembly   |
 | SFF-8621 | MiniLink 4/8X 24 Gb/s Interconnect Solution                  |            |
 | SFF-8614 | Mini Multilane 4/8X Shielded Cage/Connector (HDsh)           | Mechanical |
 | SFF-8613 | Mini Multilane 4/8X Unshielded Connector (HDun)              | Mechanical |
@@ -15,6 +21,12 @@
 | SFF-8611 | MiniLink 4/8X I/O Cable Assemblies                           | Mechanical |
 | SFF-8087 | Mini Multilane 4X Unshielded Connector Shell and Plug        | Mechanical |
 | SFF-8088 | Mini Multilane 4X Shielded Connector Shell and Plug          | Mechanical |
+
+## SFF-TA-1001
+
+* [SFF-TA-1001](https://members.snia.org/document/dl/26900)
+
+![](images/sff-ta-1001.png)
 
 ## SFF-9402
 
@@ -46,6 +58,13 @@
 * [SFF-8643 Rev 3.5](https://members.snia.org/document/dl/25951)
 
 ![](images/sff-8643.png)
+
+## SFF-8639
+
+* [SFF-8639 Rev 2.1](https://members.snia.org/document/dl/26489)
+
+![](images/sff-8639.png)
+
 
 ## SFF-8621
 
