@@ -5,7 +5,7 @@
 
 | No          | Title                                                        | Type       |
 |-------------|--------------------------------------------------------------|------------|
-| SFF-TA-1001 | Universal x4 Link Definition for SFF-8639 (a.k.a: U.2?)      |            |
+| SFF-TA-1001 | Universal x4 Link Definition for SFF-8639 (a.k.a: U.3?)      |            |
 
 | No       | Title                                                        | Type       |
 |----------|--------------------------------------------------------------|------------|
@@ -24,7 +24,7 @@
 
 ## SFF-TA-1001
 
-* [SFF-TA-1001](https://members.snia.org/document/dl/26900)
+* [SFF-TA-1001](https://members.snia.org/document/dl/26900) (a.k.a: U.3?)
 
 ![](images/sff-ta-1001.png)
 
