@@ -68,6 +68,17 @@
   * コメント: 光ファイバ通信の第7版
   * https://www.elsevier.com/books/optical-fiber-telecommunications-vii/willner/978-0-12-816502-7
 
+* 解説 ファイバーレーザー -基礎編-(絶版)
+  * 著者: 住村 和彦、西浦 匡則
+  * 出版社: オプトロニクス社
+  * 言語: 日本語
+  * ISBN-10: 4902312476
+  * ISBN-13: 978-4902312478
+  * 発売日： 2011/1/11
+  * コメント: 某所セミナーの推薦本
+  * https://optipedia.info/laser/fiberlaser_book/ で全文公開されている
+
+
 ## Web
 
 * [LIGHTWAVE](https://www.lightwaveonline.com)
