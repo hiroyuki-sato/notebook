@@ -47,3 +47,14 @@
 * 出版年月: 1993/07/15
 
 
+## その他参考用[hnakamur2さん紹介](https://twitter.com/hnakamur2/status/1272782406047510529?s=20)
+
+* [Textbook on Graph Theory using Linear Algebra](https://math.stackexchange.com/questions/1527842/textbook-on-graph-theory-using-linear-algebra)
+* [What are good books to learn graph theory?](https://math.stackexchange.com/questions/27480/what-are-good-books-to-learn-graph-theory)
+
+#### 何冊かピックアップ
+
+* [Graph Theory](https://www.springer.com/jp/book/9781846289699)
+* [Graphs and Matrices](https://www.springer.com/jp/book/9781447165682)
+* [Handbook of Graph Theory, 2nd Edition](https://learning.oreilly.com/library/view/handbook-of-graph/9781439880197/)
+
