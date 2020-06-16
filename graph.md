@@ -36,7 +36,7 @@
 * 出版年月: 2012年01月
 
 
-#### 書名: [グラフ理論入門(原書第4版)(https://www.kindaikagaku.co.jp/information/kd0296.htm)
+#### 書名: [グラフ理論入門(原書第4版)](https://www.kindaikagaku.co.jp/information/kd0296.htm)
 * 著者:  R.J.ウィルソン 著、西関隆夫 、西関裕子訳
 * ISBN: 4-7649-0296-6
 * 出版年月: 2001.10.30
