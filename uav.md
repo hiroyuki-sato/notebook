@@ -16,7 +16,6 @@
 ## Sensor & Laser
 
 * [Hovermap](https://research.csiro.au/robotics/hovermap/) CSIRO
-* [Velodyne Lider](https://velodynelidar.com)
 * [Riegl Japan](http://www.riegl-japan.co.jp)
 * [YellowScan](https://www.yellowscan-lidar.com)
 
@@ -24,6 +23,14 @@
 * [FARO Technologies]()
 
 * [Teledyne Optech](https://www.teledyneoptech.com/en/products/compact-lidar/)
+
+## 3D LiDAR
+
+* [Velodyne LiDAR](https://velodynelidar.com)
+* [HESAI](https://www.hesaitech.com/en) [特徴](https://twitter.com/imakino/status/1281493404761731074?s=20)
+* [OUSTER](https://ouster.com)
+* [RoboSense](https://www.robosense.ai)
+* [LeiShen](http://www.lslidar.com)
 
 ## Green Laser
 
@@ -42,4 +49,6 @@
   * オーストリアRiegl社のROBIN、フランスYellowScan社のSurveyer Ultra、オーストラリアCSIROのHovermap
 * 2016/12/12 [日本初 レーザー搭載固定翼ドローンの開発開始、森林や災害現場の測量へ～RieglとVelodyne 2社レーザー使い分けにより、幅広い顧客ニーズに対応～（テラドローン）](https://prtimes.jp/main/html/rd/p/000000008.000020194.html) PRTIMES 
   * 3DML社の ROBIN（Riegl社VUX-1HA搭載）
+* [（Lidar関連）複数の3D Lidarの比較データシート](https://optinews.info/2020/04/14/lidar-165/) 名古屋大学とTierIVによる、複数の3D LiDARデータセットを発表
+  * [LIBRE: The Multiple 3D LiDAR Dataset](https://arxiv.org/abs/2003.06129)
 
