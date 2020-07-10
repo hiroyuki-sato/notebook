@@ -31,6 +31,7 @@
 * [OUSTER](https://ouster.com)
 * [RoboSense](https://www.robosense.ai)
 * [LeiShen](http://www.lslidar.com)
+* [HOKUYO](https://www.hokuyo-aut.co.jp)
 
 ## Green Laser
 
@@ -49,6 +50,6 @@
   * オーストリアRiegl社のROBIN、フランスYellowScan社のSurveyer Ultra、オーストラリアCSIROのHovermap
 * 2016/12/12 [日本初 レーザー搭載固定翼ドローンの開発開始、森林や災害現場の測量へ～RieglとVelodyne 2社レーザー使い分けにより、幅広い顧客ニーズに対応～（テラドローン）](https://prtimes.jp/main/html/rd/p/000000008.000020194.html) PRTIMES 
   * 3DML社の ROBIN（Riegl社VUX-1HA搭載）
-* [（Lidar関連）複数の3D Lidarの比較データシート](https://optinews.info/2020/04/14/lidar-165/) 名古屋大学とTierIVによる、複数の3D LiDARデータセットを発表
-  * [LIBRE: The Multiple 3D LiDAR Dataset](https://arxiv.org/abs/2003.06129)
+* 2020-04-14 [（Lidar関連）複数の3D Lidarの比較データシート](https://optinews.info/2020/04/14/lidar-165/) 名古屋大学とTierIVによる、複数の3D LiDARデータセットを発表
+  * 2020-03-13 [LIBRE: The Multiple 3D LiDAR Dataset](https://arxiv.org/abs/2003.06129)
 
