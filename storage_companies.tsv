@@ -4,6 +4,7 @@ Amplidata	Western Digital
 Apeiron	
 ATTALA Systems	
 Auspex Systems	NetApp
+AWS	
 Blue Arc	Hitachi Data Systems
 COHESITY	
 Compaq	HP
@@ -13,7 +14,7 @@ DDN
 DEC	HP
 Dell	
 DSSD	EMC
-E8	
+E8	AWS
 Elastifile	Google
 EMC	Dell
 EqualLogic	Dell
@@ -32,6 +33,7 @@ Infinidat
 Isilon	EMC
 Kaminario	
 Kazan Networks	Western Digital
+KIOXIA
 Kmesh	
 Lefthand	HP
 Likewise	EMC
@@ -59,7 +61,9 @@ StorPool Storage
 Sun Microsystems	Oracle
 Tegile Systems	Western Digital
 Tintri	DDN
-Toshiba Memory America(TMA)	
+Toshiba	Toshiba Memory(spin-off/acquired(Pangea)),TOSHIBA ELECTRONIC DEVICES & STORAGE CORPORATION(spin-off)
+TOSHIBA ELECTRONIC DEVICES & STORAGE CORPORATION
+Toshiba Memory	KIOXIA(Rename)
 Upthere	Western Digital
 VAST Data array	
 Vexata	
