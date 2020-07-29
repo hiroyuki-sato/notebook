@@ -10,6 +10,7 @@ COHESITY
 Compaq	HP
 Data General	EMC
 DATERA	
+Datrium	VMware
 DDN	
 DEC	HP
 Dell	
@@ -30,6 +31,7 @@ Huawei
 IBM	
 ID7	Fusion-io
 Infinidat	
+Intelliflash	WD -> DDN
 Isilon	EMC
 Kaminario	
 Kazan Networks	Western Digital
@@ -39,6 +41,7 @@ Lefthand	HP
 Likewise	EMC
 NEC	
 NetApp	
+Nexenta	DDN
 NUTANIX	
 Ocarina Networks	Dell
 ONStor	LSI -> NetApp
@@ -69,6 +72,7 @@ VAST Data array
 Vexata	
 Violin Systems	
 Virident Systems	HGST
+VMWare	EMC
 Wasabi Technologies	
 WekaIO	
 Western Digital	
