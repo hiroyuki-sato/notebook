@@ -45,8 +45,6 @@
 ./bin/setup
 ./bin/bundle
 ./bin/yarn
-./bin/webpack
-./bin/webpack-dev-server
 ./bin/spring
 ./bin/rails
 ```
@@ -68,12 +66,7 @@
 ./config/puma.rb
 ./config/credentials.yml.enc
 ./config/database.yml
-./config/webpack/development.js
-./config/webpack/test.js
-./config/webpack/production.js
-./config/webpack/environment.js
 ./config/boot.rb
-./config/webpacker.yml
 ./config/initializers/application_controller_renderer.rb
 ./config/initializers/backtrace_silencers.rb
 ./config/initializers/mime_types.rb
@@ -131,7 +124,14 @@
 ## Webpacker (アセットパイプライン sprockets4の代わり)
 
 ```
+./bin/webpack
+./bin/webpack-dev-server
 ./postcss.config.js
 ./app/javascript/packs/application.js
 ./.browserslistrc
+./config/webpack/development.js
+./config/webpack/test.js
+./config/webpack/production.js
+./config/webpack/environment.js
+./config/webpacker.yml
 ```
