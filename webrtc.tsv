@@ -1,15 +1,15 @@
 原文	和訳案1	和訳案2
-Latency	遅延	レイテンシー
-Quality	品質	クオリティ
+Answer	応答	アンサー
 Call	通話	コール
-Lossless	可逆	ロスレス
-Lossy	不可逆	ロッシー
+Handshake		ハンドシェイク
 Inter-frame	フレーム間	インターフレーム
 Intra-frame	フレーム内	イントラフレーム
-State Machine	状態遷移	ステートマシーン
-Handshake		ハンドシェイク
-Payload		ペイロード
-Session		セッション
 Key	鍵	キー
+Latency	遅延	レイテンシー
+Lossless	可逆	ロスレス
+Lossy	不可逆	ロッシー
 Offer	依頼	オファー
-Answer	応答	アンサー
+Payload		ペイロード
+Quality	品質	クオリティ
+Session		セッション
+State Machine	状態遷移	ステートマシーン
