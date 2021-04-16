@@ -1,6 +1,6 @@
 原文	和訳案1	和訳案2
 101	いろは	コトハジメ
-Answer	応答	アンサー
+Answer	アンサー	
 Call	通話	コール
 Handshake		ハンドシェイク
 Inter-frame	フレーム間	インターフレーム
@@ -9,8 +9,11 @@ Key	鍵	キー
 Latency	遅延	レイテンシー
 Lossless	可逆	ロスレス
 Lossy	不可逆	ロッシー
-Offer	依頼	オファー
+Media description	メディア記述	
+Negotiation	交渉	ネゴシエーション
+Offer	オファー	
 Payload		ペイロード
 Quality	品質	クオリティ
 Session		セッション
 State Machine	状態遷移	ステートマシーン
+WebRTC Agent	WebRTC エージェント	
