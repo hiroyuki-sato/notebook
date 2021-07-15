@@ -59,7 +59,7 @@
 
   * 2.5/5GBase-TにCat5eやCat6を利用する時は、(1) ケーブル単体の試験と(Internal Parameter、挿入ロス・リターンロス・クロストーク等)と(2) ALSNRの試験が必要
   * ALSNRはTSB-5021で定義されている。
-
+* [Flukeテクニカル資料のダウンロード](https://jp.flukenetworks.com/tech_data)
 
 ## IEEE802.3:2015
 
