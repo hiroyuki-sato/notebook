@@ -1,0 +1,53 @@
+ACK	Acknowledgment
+B-Frame	Bi-directional Predicted Frame. A partial picture, is a modification of previous and future pictures.
+DCEP	Data Channel Establishment Protocol
+DCEP	Data Channel Establishment Protocol
+DeMux	Demultiplexer
+DLSR	delay since last sender report
+DTLS	Datagram Transport Layer Security
+E2E	end-to-end
+FEC	Forward Error Correction
+FIR	Full INTRA-frame Request
+HTTP	Hypertext Transfer Protocol
+HTTPS	
+I-Frame	Intra-coded Frame. A complete picture, can be decoded without anything else.
+ICE	Interactive Connectivity Establishment
+INIT	Initiate
+IP	Internet Protocol
+IPv4	Internet Protocol, Version 4
+IPv6	Internet Protocol, Version 6
+JSEP	JavaScript Session Establishment Protocol
+mDNS	Multicast DNS
+MITM	Man-In-The-Middle
+MTU	Maximum Transmission Unit
+MUX	Multiplexing
+NACK	Negative Acknowledgment
+NAT	Network Address Translation
+P-Frame	Predicted Frame. A partial picture, containing only changes from the previous picture.
+P2P	peer-to-peer
+PLI	Picture Loss Indication
+PPID	Payload Protocol Identifier
+REMB	Receiver Estimated Maximum Bitrate
+RMCAT	RTP Media Congestion Avoidance Techniques
+RR	Receiver Report
+RTCP	RTP Control Protocol
+RTP	Real-time transport protocol
+RTT	Round-trip time
+SCTP	Stream Control Transmission Protocol
+SDP	Session Description Protocol
+SR	Sender Report
+SRTP	Secure Real-time Transport Protocol
+STUN	Session Traversal Utilities for NAT
+TCP	Transmission Control Protocol
+TMMBN	Temporary Maximum Media Stream Bit Rate Notification
+TMMBR	Temporary Maximum Media Stream Bit Rate Request
+TSN	Transmission Sequence Number
+TLS	The Transport Layer Security
+TURN	Traversal Using Relays around NAT
+TWCC	Transport Wide Congestion Control
+UDP	User Datagram Protocol
+WebRTC	
+SACK	Selective Acknowledgment 
+IoT	Internet of Things
+MCU	Multi-point Conferencing Unit
+SFU	Selective Forwarding Unit
