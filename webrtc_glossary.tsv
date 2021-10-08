@@ -1,3 +1,4 @@
+KEY	Description
 ACK	Acknowledgment
 B-Frame	Bi-directional Predicted Frame. A partial picture, is a modification of previous and future pictures.
 DCEP	Data Channel Establishment Protocol
