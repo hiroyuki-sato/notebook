@@ -1,0 +1,872 @@
+num_entries	Number or entries	nvme_aggregate_endurance_group_event
+entries	List of entries	nvme_aggregate_endurance_group_event
+num_entries	Number of entries	nvme_aggregate_predictable_lat_event
+entries	Entry list	nvme_aggregate_predictable_lat_event
+grpid	ANA group id	nvme_ana_group_desc
+nnsids	Number of namespaces in nsids	nvme_ana_group_desc
+chgcnt	Change counter	nvme_ana_group_desc
+state	ANA state	nvme_ana_group_desc
+rsvd17	Reserved	nvme_ana_group_desc
+nsids	List of namespaces	nvme_ana_group_desc
+chgcnt	Change Count	nvme_ana_log
+ngrps	Number of ANA Group Descriptors	nvme_ana_log
+rsvd10	Reserved	nvme_ana_log
+descs	ANA Group Descriptor	nvme_ana_log
+lid	Boot Partition Identifier	nvme_boot_partition
+rsvd1	Reserved	nvme_boot_partition
+bpinfo	Boot Partition Information	nvme_boot_partition
+rsvd8	Reserved	nvme_boot_partition
+domainid	Domain Identifier	nvme_capacity_config_desc
+egcn	Number Endurance Group Configuration Descriptors	nvme_capacity_config_desc
+rsvd6	Reserved	nvme_capacity_config_desc
+egcd	Endurance Group Config descriptors. See struct nvme_end_grp_config_desc	nvme_capacity_config_desc
+nsmgt_cdw10	Namespace Management CDW10	nvme_change_ns_event
+rsvd4	Reserved	nvme_change_ns_event
+nsze	Namespace Size	nvme_change_ns_event
+rsvd16	Reserved	nvme_change_ns_event
+nscap	Namespace Capacity	nvme_change_ns_event
+flbas	Formatted LBA Size	nvme_change_ns_event
+dps	End-to-end Data Protection Type Settings	nvme_change_ns_event
+nmic	Namespace Multi-path I/O and Namespace Sharing Capabilities	nvme_change_ns_event
+rsvd35	Reserved	nvme_change_ns_event
+ana_grp_id	ANA Group Identifier	nvme_change_ns_event
+nvmset_id	NVM Set Identifier	nvme_change_ns_event
+rsvd42	Reserved	nvme_change_ns_event
+nsid	Namespace ID	nvme_change_ns_event
+chanid	Channel Identifier	nvme_channel_config_desc
+chmus	Number Channel Media Units	nvme_channel_config_desc
+acs	Admin Command Supported	nvme_cmd_effects_log
+iocs	I/O Command Supported	nvme_cmd_effects_log
+rsvd	Reserved	nvme_cmd_effects_log
+rsvd0	Reserved	nvme_copy_range
+slba	Starting LBA	nvme_copy_range
+nlb	Number of Logical Blocks	nvme_copy_range
+rsvd18	Reserved	nvme_copy_range
+eilbrt	Expected Initial Logical Block Reference Tag / Expected Logical Block Storage Tag	nvme_copy_range
+elbat	Expected Logical Block Application Tag	nvme_copy_range
+elbatm	Expected Logical Block Application Tag Mask	nvme_copy_range
+rsvd0	Reserved	nvme_copy_range_f1
+slba	Starting LBA	nvme_copy_range_f1
+nlb	Number of Logical Blocks	nvme_copy_range_f1
+rsvd18	Reserved	nvme_copy_range_f1
+elbt	Expected Initial Logical Block Reference Tag / Expected Logical Block Storage Tag	nvme_copy_range_f1
+elbat	Expected Logical Block Application Tag	nvme_copy_range_f1
+elbatm	Expected Logical Block Application Tag Mask	nvme_copy_range_f1
+num	Number of Identifiers	nvme_ctrl_list
+identifier	NVM subsystem unique controller identifier	nvme_ctrl_list
+cattr	Context Attributes	nvme_dsm_range
+nlb	Length in logical blocks	nvme_dsm_range
+slba	Starting LBA	nvme_dsm_range
+nr_entries	Number of Entries	nvme_eg_event_aggregate_log
+egids	Endurance Group Identifier	nvme_eg_event_aggregate_log
+egchans	Number of Channels	nvme_end_grp_chan_desc
+endgid	Endurance Group Identifier	nvme_end_grp_config_desc
+rsvd4	Reserved	nvme_end_grp_config_desc
+tegcap	Total Endurance Group Capacity	nvme_end_grp_config_desc
+segcap	Spare Endurance Group Capacity	nvme_end_grp_config_desc
+end_est	Endurance Estimate	nvme_end_grp_config_desc
+rsvd64	Reserved	nvme_end_grp_config_desc
+egsets	Number of NVM Sets	nvme_end_grp_config_desc
+nvmsetid	NVM Set Identifier	nvme_end_grp_config_desc
+rsvd1	Reserved	nvme_endurance_group_log
+avl_spare	Available Spare	nvme_endurance_group_log
+rsvd6	Reserved	nvme_endurance_group_log
+rsvd160	Reserved	nvme_endurance_group_log
+error_count	Error Count: a 64-bit incrementing error count, indicating a unique identifier for this error. The error count starts at 1h, is incremented for each unique error log entry, and is retained across power off conditions. A value of 0h indicates an invalid entry; this value is used when there are lost entries or when there are fewer errors than the maximum number of entries the controller supports. If the value of this field is FFFFFFFFh, then the field shall be set to 1h when incremented (i.e., rolls over to 1h). Prior to NVMe 1.4, processing of incrementing beyond FFFFFFFFh is unspecified.	nvme_error_log_page
+sqid	Submission Queue ID: indicates the Submission Queue Identifier of the command that the error information is associated with. If the error is not specific to a particular command, then this field shall be set to FFFFh.	nvme_error_log_page
+cmdid	Command ID: indicates the Command Identifier of the command that the error is associated with. If the error is not specific to a particular command, then this field shall be set to FFFFh.	nvme_error_log_page
+lba	LBA: This field indicates the first LBA that experienced the error condition, if applicable.	nvme_error_log_page
+nsid	Namespace: This field indicates the NSID of the namespace that the error is associated with, if applicable.	nvme_error_log_page
+vs	Vendor Specific Information Available: If there is additional vendor specific error information available, this field provides the log page identifier associated with that page. A value of 0h indicates that no additional information is available. Valid values are in the range of 80h to FFh.	nvme_error_log_page
+trtype	Transport Type (TRTYPE): indicates the Transport Type of the transport associated with the error. The values in this field are the same as the TRTYPE values in the Discovery Log Page Entry. If the error is not transport related, this field shall be cleared to 0h. If the error is transport related, this field shall be set to the type of the transport see enum nvme_trtype.	nvme_error_log_page
+csi	Command Set Indicator: This field contains command set indicator for the command that the error is associated with.	nvme_error_log_page
+opcode	Opcode: This field contains opcode for the command that the error is associated with.	nvme_error_log_page
+cs	Command Specific Information: This field contains command specific information. If used, the command definition specifies the information returned.	nvme_error_log_page
+rsvd	Reserved: [62:42]	nvme_error_log_page
+host_traddr	Host transport address	nvme_fabrics_config
+host_iface	Host interface name	nvme_fabrics_config
+queue_size	Number of IO queue entries	nvme_fabrics_config
+tos	Type of service	nvme_fabrics_config
+keyring	Keyring to store and lookup keys	nvme_fabrics_config
+tls_key	TLS PSK for the connection	nvme_fabrics_config
+hdr_digest	Generate/verify header digest (TCP)	nvme_fabrics_config
+data_digest	Generate/verify data digest (TCP)	nvme_fabrics_config
+tls	Start TLS on the connection (TCP)	nvme_fabrics_config
+size	Descriptor size	nvme_fdp_config_desc
+fdpa	FDP Attributes (enum nvme_fdp_config_fdpa)	nvme_fdp_config_desc
+vss	Vendor Specific Size	nvme_fdp_config_desc
+nrg	Number of Reclaim Groups	nvme_fdp_config_desc
+nruh	Number of Reclaim Unit Handles	nvme_fdp_config_desc
+maxpids	Max Placement Identifiers	nvme_fdp_config_desc
+nnss	Number of Namespaces Supported	nvme_fdp_config_desc
+runs	Reclaim Unit Nominal Size	nvme_fdp_config_desc
+erutl	Estimated Reclaim Unit Time Limit	nvme_fdp_config_desc
+rsvd28	Reserved	nvme_fdp_config_desc
+ruhs	Reclaim Unit Handle descriptors (struct nvme_fdp_ruh_desc)	nvme_fdp_config_desc
+n	Number of FDP Configurations	nvme_fdp_config_log
+version	Log page version	nvme_fdp_config_log
+rsvd3	Reserved	nvme_fdp_config_log
+size	Log page size in bytes	nvme_fdp_config_log
+rsvd8	Reserved	nvme_fdp_config_log
+configs	FDP Configuration descriptors (struct nvme_fdp_config_desc)	nvme_fdp_config_log
+type	Event Type (enum nvme_fdp_event_type)	nvme_fdp_event
+flags	Event Flags (enum nvme_fdp_event_flags)	nvme_fdp_event
+pid	Placement Identifier	nvme_fdp_event
+ts	Timestamp	nvme_fdp_event
+nsid	Namespace Identifier	nvme_fdp_event
+rgid	Reclaim Group Identifier	nvme_fdp_event
+ruhid	Reclaim Unit Handle Identifier	nvme_fdp_event
+rsvd35	Reserved	nvme_fdp_event
+vs	Vendor Specific	nvme_fdp_event
+flags	Event Type Specific flags (enum nvme_fdp_event_realloc_flags)	nvme_fdp_event_realloc
+rsvd1	Reserved	nvme_fdp_event_realloc
+nlbam	Number of LBAs Moved	nvme_fdp_event_realloc
+lba	Logical Block Address	nvme_fdp_event_realloc
+rsvd12	Reserved	nvme_fdp_event_realloc
+n	Number of FDP Events	nvme_fdp_events_log
+rsvd4	Reserved	nvme_fdp_events_log
+events	FDP Events (struct nvme_fdp_event)	nvme_fdp_events_log
+ruht	Reclaim Unit Handle Type	nvme_fdp_ruh_desc
+rsvd1	Reserved	nvme_fdp_ruh_desc
+rsvd0	Reserved	nvme_fdp_ruh_status
+nruhsd	Number of Reclaim Unit Handle Status Descriptors	nvme_fdp_ruh_status
+ruhss	Reclaim Unit Handle Status descriptors	nvme_fdp_ruh_status
+pid	Placement Identifier	nvme_fdp_ruh_status_desc
+ruhid	Reclaim Unit Handle Identifier	nvme_fdp_ruh_status_desc
+earutr	Estimated Active Reclaim Unit Time Remaining	nvme_fdp_ruh_status_desc
+ruamw	Reclaim Unit Available Media Writes	nvme_fdp_ruh_status_desc
+rsvd16	Reserved	nvme_fdp_ruh_status_desc
+ruha	Reclaim Unit Handle Attributes (enum nvme_fdp_ruha)	nvme_fdp_ruhu_desc
+rsvd1	Reserved	nvme_fdp_ruhu_desc
+nruh	Number of Reclaim Unit Handles	nvme_fdp_ruhu_log
+rsvd2	Reserved	nvme_fdp_ruhu_log
+ruhus	Reclaim Unit Handle Usage descriptors	nvme_fdp_ruhu_log
+hbmw	Host Bytes with Metadata Written	nvme_fdp_stats_log
+mbmw	Media Bytes with Metadata Written	nvme_fdp_stats_log
+mbe	Media Bytes Erased	nvme_fdp_stats_log
+rsvd48	Reserved	nvme_fdp_stats_log
+evt	FDP Event Type	nvme_fdp_supported_event_desc
+evta	FDP Event Type Attributes (enum nvme_fdp_supported_event_attributes)	nvme_fdp_supported_event_desc
+apst_entry	See enum nvme_apst_entry	nvme_feat_auto_pst
+phndl	Placement Handle	nvme_feat_fdp_events_cdw11
+noet	Number of FDP Event Types	nvme_feat_fdp_events_cdw11
+rsvd24	Reserved	nvme_feat_fdp_events_cdw11
+acre	Advanced Command Retry Enable	nvme_feat_host_behavior
+rsvd1	Reserved	nvme_feat_host_behavior
+fid_support	Feature Identifier Supported	nvme_fid_supported_effects_log
+afi	Active Firmware Info	nvme_firmware_slot
+rsvd1	Reserved	nvme_firmware_slot
+frs	Firmware Revision for Slot	nvme_firmware_slot
+rsvd2	Reserved	nvme_firmware_slot
+nsid	Namespace Identifier	nvme_format_nvm_compln_event
+compln_info	Completion Information	nvme_format_nvm_compln_event
+nsid	Namespace Identifier	nvme_format_nvm_start_event
+fna	Format NVM Attributes	nvme_format_nvm_start_event
+rsvd5	Reserved	nvme_format_nvm_start_event
+old_fw_rev	Old Firmware Revision	nvme_fw_commit_event
+new_fw_rev	New Firmware Revision	nvme_fw_commit_event
+fw_slot	Firmware Slot	nvme_fw_commit_event
+sct_fw	Status Code Type for Firmware Commit Command	nvme_fw_commit_event
+sc_fw	Status Returned for Firmware Commit Command	nvme_fw_commit_event
+c	Discovery controller	nvme_get_discovery_args
+args_size	Length of the structure	nvme_get_discovery_args
+max_retries	Number of retries in case of failure	nvme_get_discovery_args
+result	The command completion result from CQE dword0	nvme_get_discovery_args
+timeout	Timeout in ms (default: NVME_DEFAULT_IOCTL_TIMEOUT)	nvme_get_discovery_args
+lsp	Log specific field (See enum nvmf_log_discovery_lsp)	nvme_get_discovery_args
+hsize	Host Memory Buffer Size	nvme_host_mem_buf_attrs
+hmdlal	Host Memory Descriptor List Lower Address	nvme_host_mem_buf_attrs
+hmdlau	Host Memory Descriptor List Upper Address	nvme_host_mem_buf_attrs
+hmdlec	Host Memory Descriptor List Entry Count	nvme_host_mem_buf_attrs
+rsvd16	Reserved	nvme_host_mem_buf_attrs
+ndesc	Number of metadata element descriptors	nvme_host_metadata
+rsvd1	Reserved	nvme_host_metadata
+descs	Metadata element descriptors	nvme_host_metadata
+descs_buf	Metadata element descriptor buffer	nvme_host_metadata
+vid	PCI Vendor ID, the company vendor identifier that is assigned by the PCI SIG.	nvme_id_ctrl
+ssvid	PCI Subsystem Vendor ID, the company vendor identifier that is assigned by the PCI SIG for the subsystem.	nvme_id_ctrl
+sn	Serial Number in ASCII	nvme_id_ctrl
+mn	Model Number in ASCII	nvme_id_ctrl
+fr	Firmware Revision in ASCII, the currently active firmware revision for the NVM subsystem	nvme_id_ctrl
+rab	Recommended Arbitration Burst, reported as a power of two	nvme_id_ctrl
+ieee	IEEE assigned Organization Unique Identifier	nvme_id_ctrl
+cmic	Controller Multipath IO and Namespace Sharing Capabilities of the controller and NVM subsystem. See enum nvme_id_ctrl_cmic.	nvme_id_ctrl
+mdts	Max Data Transfer Size is the largest data transfer size. The host should not submit a command that exceeds this maximum data transfer size. The value is in units of the minimum memory page size (CAP.MPSMIN) and is reported as a power of two	nvme_id_ctrl
+cntlid	Controller ID, the NVM subsystem unique controller identifier associated with the controller.	nvme_id_ctrl
+ver	Version, this field contains the value reported in the Version register, or property (see enum nvme_registers NVME_REG_VS).	nvme_id_ctrl
+rtd3r	RTD3 Resume Latency, the expected latency in microseconds to resume from Runtime D3	nvme_id_ctrl
+rtd3e	RTD3 Exit Latency, the typical latency in microseconds to enter Runtime D3.	nvme_id_ctrl
+oaes	Optional Async Events Supported, see enum nvme_id_ctrl_oaes.	nvme_id_ctrl
+ctratt	Controller Attributes, see enum nvme_id_ctrl_ctratt.	nvme_id_ctrl
+rrls	Read Recovery Levels. If a bit is set, then the corresponding Read Recovery Level is supported. If a bit is cleared, then the corresponding Read Recovery Level is not supported.	nvme_id_ctrl
+rsvd102	Reserved	nvme_id_ctrl
+cntrltype	Controller Type, see enum nvme_id_ctrl_cntrltype	nvme_id_ctrl
+fguid	FRU GUID, a 128-bit value that is globally unique for a given Field Replaceable Unit	nvme_id_ctrl
+crdt1	Controller Retry Delay time in 100 millisecond units if CQE CRD field is 1	nvme_id_ctrl
+crdt2	Controller Retry Delay time in 100 millisecond units if CQE CRD field is 2	nvme_id_ctrl
+crdt3	Controller Retry Delay time in 100 millisecond units if CQE CRD field is 3	nvme_id_ctrl
+rsvd134	Reserved	nvme_id_ctrl
+nvmsr	NVM Subsystem Report, see enum nvme_id_ctrl_nvmsr	nvme_id_ctrl
+vwci	VPD Write Cycle Information, see enum nvme_id_ctrl_vwci	nvme_id_ctrl
+mec	Management Endpoint Capabilities, see enum nvme_id_ctrl_mec	nvme_id_ctrl
+oacs	Optional Admin Command Support,the optional Admin commands and features supported by the controller, see enum nvme_id_ctrl_oacs.	nvme_id_ctrl
+acl	Abort Command Limit, the maximum number of concurrently executing Abort commands supported by the controller. This is a 0's based value.	nvme_id_ctrl
+aerl	Async Event Request Limit, the maximum number of concurrently outstanding Asynchronous Event Request commands supported by the controller This is a 0's based value.	nvme_id_ctrl
+frmw	Firmware Updates indicates capabilities regarding firmware updates. See enum nvme_id_ctrl_frmw.	nvme_id_ctrl
+lpa	Log Page Attributes, see enum nvme_id_ctrl_lpa.	nvme_id_ctrl
+elpe	Error Log Page Entries, the maximum number of Error Information log entries that are stored by the controller. This field is a 0's based value.	nvme_id_ctrl
+npss	Number of Power States Supported, the number of NVM Express power states supported by the controller, indicating the number of valid entries in struct nvme_id_ctrl.psd. This is a 0's based value.	nvme_id_ctrl
+avscc	Admin Vendor Specific Command Configuration, see enum nvme_id_ctrl_avscc.	nvme_id_ctrl
+apsta	Autonomous Power State Transition Attributes, see enum nvme_id_ctrl_apsta.	nvme_id_ctrl
+wctemp	Warning Composite Temperature Threshold indicates the minimum Composite Temperature field value (see struct nvme_smart_log.critical_comp_time) that indicates an overheating condition during which controller operation continues.	nvme_id_ctrl
+cctemp	Critical Composite Temperature Threshold, field indicates the minimum Composite Temperature field value (see struct nvme_smart_log.critical_comp_time) that indicates a critical overheating condition.	nvme_id_ctrl
+mtfa	Maximum Time for Firmware Activation indicates the maximum time the controller temporarily stops processing commands to activate the firmware image, specified in 100 millisecond units. This field is always valid if the controller supports firmware activation without a reset.	nvme_id_ctrl
+hmpre	Host Memory Buffer Preferred Size indicates the preferred size that the host is requested to allocate for the Host Memory Buffer feature in 4 KiB units.	nvme_id_ctrl
+hmmin	Host Memory Buffer Minimum Size indicates the minimum size that the host is requested to allocate for the Host Memory Buffer feature in 4 KiB units.	nvme_id_ctrl
+tnvmcap	Total NVM Capacity, the total NVM capacity in the NVM subsystem. The value is in bytes.	nvme_id_ctrl
+unvmcap	Unallocated NVM Capacity, the unallocated NVM capacity in the NVM subsystem. The value is in bytes.	nvme_id_ctrl
+rpmbs	Replay Protected Memory Block Support, see enum nvme_id_ctrl_rpmbs.	nvme_id_ctrl
+edstt	Extended Device Self-test Time, if Device Self-test command is supported (see struct nvme_id_ctrl.oacs, NVME_CTRL_OACS_SELF_TEST), then this field indicates the nominal amount of time in one minute units that the controller takes to complete an extended device self-test operation when in power state 0.	nvme_id_ctrl
+dsto	Device Self-test Options, see enum nvme_id_ctrl_dsto.	nvme_id_ctrl
+fwug	Firmware Update Granularity indicates the granularity and alignment requirement of the firmware image being updated by the Firmware Image Download command. The value is reported in 4 KiB units. A value of 0h indicates no information on granularity is provided. A value of FFh indicates no restriction	nvme_id_ctrl
+kas	Keep Alive Support indicates the granularity of the Keep Alive Timer in 100 millisecond units.	nvme_id_ctrl
+hctma	Host Controlled Thermal Management Attributes, see enum nvme_id_ctrl_hctm.	nvme_id_ctrl
+mntmt	Minimum Thermal Management Temperature indicates the minimum temperature, in degrees Kelvin, that the host may request in the Thermal Management Temperature 1 field and Thermal Management Temperature 2 field of a Set Features command with the Feature Identifier field set to NVME_FEAT_FID_HCTM.	nvme_id_ctrl
+mxtmt	Maximum Thermal Management Temperature indicates the maximum temperature, in degrees Kelvin, that the host may request in the Thermal Management Temperature 1 field and Thermal Management Temperature 2 field of the Set Features command with the Feature Identifier set to NVME_FEAT_FID_HCTM.	nvme_id_ctrl
+sanicap	Sanitize Capabilities, see enum nvme_id_ctrl_sanicap	nvme_id_ctrl
+hmminds	Host Memory Buffer Minimum Descriptor Entry Size indicates the minimum usable size of a Host Memory Buffer Descriptor Entry in 4 KiB units.	nvme_id_ctrl
+hmmaxd	Host Memory Maximum Descriptors Entries indicates the number of usable Host Memory Buffer Descriptor Entries.	nvme_id_ctrl
+nsetidmax	NVM Set Identifier Maximum, defines the maximum value of a valid NVM Set Identifier for any controller in the NVM subsystem.	nvme_id_ctrl
+endgidmax	Endurance Group Identifier Maximum, defines the maximum value of a valid Endurance Group Identifier for any controller in the NVM subsystem.	nvme_id_ctrl
+anatt	ANA Transition Time indicates the maximum amount of time, in seconds, for a transition between ANA states or the maximum amount of time, in seconds, that the controller reports the ANA change state.	nvme_id_ctrl
+anacap	Asymmetric Namespace Access Capabilities, see enum nvme_id_ctrl_anacap.	nvme_id_ctrl
+anagrpmax	ANA Group Identifier Maximum indicates the maximum value of a valid ANA Group Identifier for any controller in the NVM subsystem.	nvme_id_ctrl
+nanagrpid	Number of ANA Group Identifiers indicates the number of ANA groups supported by this controller.	nvme_id_ctrl
+pels	Persistent Event Log Size indicates the maximum reportable size for the Persistent Event Log.	nvme_id_ctrl
+domainid	Domain Identifier indicates the identifier of the domain that contains this controller.	nvme_id_ctrl
+rsvd358	Reserved	nvme_id_ctrl
+megcap	Max Endurance Group Capacity indicates the maximum capacity of a single Endurance Group.	nvme_id_ctrl
+rsvd384	Reserved	nvme_id_ctrl
+sqes	Submission Queue Entry Size, see enum nvme_id_ctrl_sqes.	nvme_id_ctrl
+cqes	Completion Queue Entry Size, see enum nvme_id_ctrl_cqes.	nvme_id_ctrl
+maxcmd	Maximum Outstanding Commands indicates the maximum number of commands that the controller processes at one time for a particular queue.	nvme_id_ctrl
+nn	Number of Namespaces indicates the maximum value of a valid nsid for the NVM subsystem. If the MNAN (struct nvme_id_ctrl.mnan field is cleared to 0h, then this field also indicates the maximum number of namespaces supported by the NVM subsystem.	nvme_id_ctrl
+oncs	Optional NVM Command Support, see enum nvme_id_ctrl_oncs.	nvme_id_ctrl
+fuses	Fused Operation Support, see enum nvme_id_ctrl_fuses.	nvme_id_ctrl
+fna	Format NVM Attributes, see enum nvme_id_ctrl_fna.	nvme_id_ctrl
+vwc	Volatile Write Cache, see enum nvme_id_ctrl_vwc.	nvme_id_ctrl
+awun	Atomic Write Unit Normal indicates the size of the write operation guaranteed to be written atomically to the NVM across all namespaces with any supported namespace format during normal operation. This field is specified in logical blocks and is a 0's based value.	nvme_id_ctrl
+awupf	Atomic Write Unit Power Fail indicates the size of the write operation guaranteed to be written atomically to the NVM across all namespaces with any supported namespace format during a power fail or error condition. This field is specified in logical blocks and is a 0s based value.	nvme_id_ctrl
+icsvscc	NVM Vendor Specific Command Configuration, see enum nvme_id_ctrl_nvscc.	nvme_id_ctrl
+nwpc	Namespace Write Protection Capabilities, see enum nvme_id_ctrl_nwpc.	nvme_id_ctrl
+acwu	Atomic Compare & Write Unit indicates the size of the write operation guaranteed to be written atomically to the NVM across all namespaces with any supported namespace format for a Compare and Write fused operation. This field is specified in logical blocks and is a 0s based value.	nvme_id_ctrl
+ocfs	Optional Copy Formats Supported, each bit n means controller supports Copy Format n.	nvme_id_ctrl
+sgls	SGL Support, see enum nvme_id_ctrl_sgls	nvme_id_ctrl
+mnan	Maximum Number of Allowed Namespaces indicates the maximum number of namespaces supported by the NVM subsystem.	nvme_id_ctrl
+maxdna	Maximum Domain Namespace Attachments indicates the maximum of the sum of the number of namespaces attached to each I/O controller in the Domain.	nvme_id_ctrl
+maxcna	Maximum I/O Controller Namespace Attachments indicates the maximum number of namespaces that are allowed to be attached to this I/O controller.	nvme_id_ctrl
+rsvd564	Reserved	nvme_id_ctrl
+subnqn	NVM Subsystem NVMe Qualified Name, UTF-8 null terminated string	nvme_id_ctrl
+rsvd1024	Reserved	nvme_id_ctrl
+ioccsz	I/O Queue Command Capsule Supported Size, defines the maximum I/O command capsule size in 16 byte units.	nvme_id_ctrl
+iorcsz	I/O Queue Response Capsule Supported Size, defines the maximum I/O response capsule size in 16 byte units.	nvme_id_ctrl
+icdoff	In Capsule Data Offset, defines the offset where data starts within a capsule. This value is applicable to I/O Queues only.	nvme_id_ctrl
+fcatt	Fabrics Controller Attributes, see enum nvme_id_ctrl_fcatt.	nvme_id_ctrl
+msdbd	Maximum SGL Data Block Descriptors indicates the maximum number of SGL Data Block or Keyed SGL Data Block descriptors that a host is allowed to place in a capsule. A value of 0h indicates no limit.	nvme_id_ctrl
+ofcs	Optional Fabric Commands Support, see enum nvme_id_ctrl_ofcs.	nvme_id_ctrl
+dctype	Discovery Controller Type (DCTYPE). This field indicates what type of Discovery controller the controller is (see enum nvme_id_ctrl_dctype)	nvme_id_ctrl
+rsvd1807	Reserved	nvme_id_ctrl
+psd	Power State Descriptors, see struct nvme_id_psd.	nvme_id_ctrl
+vs	Vendor Specific	nvme_id_ctrl
+vsl	Verify Size Limit	nvme_id_ctrl_nvm
+wzsl	Write Zeroes Size Limit	nvme_id_ctrl_nvm
+wusl	Write Uncorrectable Size Limit	nvme_id_ctrl_nvm
+dmrl	Dataset Management Ranges Limit	nvme_id_ctrl_nvm
+dmrsl	Dataset Management Range Size Limit	nvme_id_ctrl_nvm
+dmsl	Dataset Management Size Limit	nvme_id_ctrl_nvm
+rsvd16	reserved	nvme_id_ctrl_nvm
+supported	Identify directive is supported	nvme_id_directives
+enabled	Identify directive is Enabled	nvme_id_directives
+rsvd64	Reserved	nvme_id_directives
+dom_id	Domain Identifier	nvme_id_domain_attr
+rsvd2	Reserved	nvme_id_domain_attr
+dom_cap	Total Domain Capacity	nvme_id_domain_attr
+rsvd64	Reserved	nvme_id_domain_attr
+num	Number of domain attributes	nvme_id_domain_list
+rsvd	Reserved	nvme_id_domain_list
+domain_attr	List of domain attributes	nvme_id_domain_list
+num	Number of Identifiers	nvme_id_endurance_group_list
+identifier	Endurance Group Identifier	nvme_id_endurance_group_list
+nsfeat	common namespace features	nvme_id_independent_id_ns
+nmic	Namespace Multi-path I/O and Namespace Sharing Capabilities	nvme_id_independent_id_ns
+rescap	Reservation Capabilities	nvme_id_independent_id_ns
+fpi	Format Progress Indicator	nvme_id_independent_id_ns
+anagrpid	ANA Group Identifier	nvme_id_independent_id_ns
+nsattr	Namespace Attributes	nvme_id_independent_id_ns
+rsvd9	reserved	nvme_id_independent_id_ns
+nvmsetid	NVM Set Identifier	nvme_id_independent_id_ns
+endgid	Endurance Group Identifier	nvme_id_independent_id_ns
+nstat	Namespace Status	nvme_id_independent_id_ns
+rsvd15	reserved	nvme_id_independent_id_ns
+iocsc	List of supported IO Command Set Combination vectors	nvme_id_iocs
+nsze	Namespace Size indicates the total size of the namespace in logical blocks. The number of logical blocks is based on the formatted LBA size.	nvme_id_ns
+ncap	Namespace Capacity indicates the maximum number of logical blocks that may be allocated in the namespace at any point in time. The number of logical blocks is based on the formatted LBA size.	nvme_id_ns
+nuse	Namespace Utilization indicates the current number of logical blocks allocated in the namespace. This field is smaller than or equal to the Namespace Capacity. The number of logical blocks is based on the formatted LBA size.	nvme_id_ns
+nsfeat	Namespace Features, see enum nvme_id_nsfeat.	nvme_id_ns
+nlbaf	Number of LBA Formats defines the number of supported LBA data size and metadata size combinations supported by the namespace and the highest possible index to struct nvme_id_ns.lbaf.	nvme_id_ns
+flbas	Formatted LBA Size, see enum nvme_id_ns_flbas.	nvme_id_ns
+mc	Metadata Capabilities, see enum nvme_id_ns_mc.	nvme_id_ns
+dpc	End-to-end Data Protection Capabilities, see enum nvme_id_ns_dpc.	nvme_id_ns
+dps	End-to-end Data Protection Type Settings, see enum nvme_id_ns_dps.	nvme_id_ns
+nmic	Namespace Multi-path I/O and Namespace Sharing Capabilities, see enum nvme_id_ns_nmic.	nvme_id_ns
+rescap	Reservation Capabilities, see enum nvme_id_ns_rescap.	nvme_id_ns
+fpi	Format Progress Indicator, see enum nvme_nd_ns_fpi.	nvme_id_ns
+dlfeat	Deallocate Logical Block Features, see enum nvme_id_ns_dlfeat.	nvme_id_ns
+nawun	Namespace Atomic Write Unit Normal indicates the namespace specific size of the write operation guaranteed to be written atomically to the NVM during normal operation.	nvme_id_ns
+nawupf	Namespace Atomic Write Unit Power Fail indicates the namespace specific size of the write operation guaranteed to be written atomically to the NVM during a power fail or error condition.	nvme_id_ns
+nacwu	Namespace Atomic Compare & Write Unit indicates the namespace specific size of the write operation guaranteed to be written atomically to the NVM for a Compare and Write fused command.	nvme_id_ns
+nabsn	Namespace Atomic Boundary Size Normal indicates the atomic boundary size for this namespace for the NAWUN value. This field is specified in logical blocks.	nvme_id_ns
+nabo	Namespace Atomic Boundary Offset indicates the LBA on this namespace where the first atomic boundary starts.	nvme_id_ns
+nabspf	Namespace Atomic Boundary Size Power Fail indicates the atomic boundary size for this namespace specific to the Namespace Atomic Write Unit Power Fail value. This field is specified in logical blocks.	nvme_id_ns
+noiob	Namespace Optimal I/O Boundary indicates the optimal I/O boundary for this namespace. This field is specified in logical blocks. The host should construct Read and Write commands that do not cross the I/O boundary to achieve optimal performance.	nvme_id_ns
+nvmcap	NVM Capacity indicates the total size of the NVM allocated to this namespace. The value is in bytes.	nvme_id_ns
+npwg	Namespace Preferred Write Granularity indicates the smallest recommended write granularity in logical blocks for this namespace. This is a 0's based value.	nvme_id_ns
+npwa	Namespace Preferred Write Alignment indicates the recommended write alignment in logical blocks for this namespace. This is a 0's based value.	nvme_id_ns
+npdg	Namespace Preferred Deallocate Granularity indicates the recommended granularity in logical blocks for the Dataset Management command with the Attribute Deallocate bit.	nvme_id_ns
+npda	Namespace Preferred Deallocate Alignment indicates the recommended alignment in logical blocks for the Dataset Management command with the Attribute Deallocate bit	nvme_id_ns
+nows	Namespace Optimal Write Size indicates the size in logical blocks for optimal write performance for this namespace. This is a 0's based value.	nvme_id_ns
+mssrl	Maximum Single Source Range Length indicates the maximum number of logical blocks that may be specified in each valid Source Range field of a Copy command.	nvme_id_ns
+mcl	Maximum Copy Length indicates the maximum number of logical blocks that may be specified in a Copy command.	nvme_id_ns
+msrc	Maximum Source Range Count indicates the maximum number of Source Range entries that may be used to specify source data in a Copy command. This is a 0s based value.	nvme_id_ns
+rsvd81	Reserved	nvme_id_ns
+nulbaf	Number of Unique Capability LBA Formats defines the number of supported user data size and metadata size combinations supported by the namespace that may not share the same capabilities. LBA formats shall be allocated in order and packed sequentially.	nvme_id_ns
+rsvd83	Reserved	nvme_id_ns
+anagrpid	ANA Group Identifier indicates the ANA Group Identifier of the ANA group of which the namespace is a member.	nvme_id_ns
+rsvd96	Reserved	nvme_id_ns
+nsattr	Namespace Attributes, see enum nvme_id_ns_attr.	nvme_id_ns
+nvmsetid	NVM Set Identifier indicates the NVM Set with which this namespace is associated.	nvme_id_ns
+endgid	Endurance Group Identifier indicates the Endurance Group with which this namespace is associated.	nvme_id_ns
+nguid	Namespace Globally Unique Identifier contains a 128-bit value that is globally unique and assigned to the namespace when the namespace is created. This field remains fixed throughout the life of the namespace and is preserved across namespace and controller operations	nvme_id_ns
+eui64	IEEE Extended Unique Identifier contains a 64-bit IEEE Extended Unique Identifier (EUI-64) that is globally unique and assigned to the namespace when the namespace is created. This field remains fixed throughout the life of the namespace and is preserved across namespace and controller operations	nvme_id_ns
+lbaf	LBA Format, see struct nvme_lbaf.	nvme_id_ns
+lbstm	Logical Block Storage Tag Mask for end-to-end protection	nvme_id_ns
+vs	Vendor Specific	nvme_id_ns
+nszegran	Namespace Size Granularity	nvme_id_ns_granularity_desc
+ncapgran	Namespace Capacity Granularity	nvme_id_ns_granularity_desc
+attributes	Namespace Granularity Attributes	nvme_id_ns_granularity_list
+rsvd5	reserved	nvme_id_ns_granularity_list
+entry	Namespace Granularity Descriptor	nvme_id_ns_granularity_list
+rsvd288	reserved	nvme_id_ns_granularity_list
+nid	Nvmset id	nvme_id_nvmset_list
+rsvd1	Reserved	nvme_id_nvmset_list
+ent	nvmset id list	nvme_id_nvmset_list
+mp	Maximum Power indicates the sustained maximum power consumed by the NVM subsystem in this power state. The power in Watts is equal to the value in this field multiplied by the scale specified in the Max Power Scale bit (see enum nvme_psd_flags). A value of 0 indicates Maximum Power is not reported.	nvme_id_psd
+rsvd2	Reserved	nvme_id_psd
+flags	Additional decoding flags, see enum nvme_psd_flags.	nvme_id_psd
+enlat	Entry Latency indicates the maximum latency in microseconds associated with entering this power state. A value of 0 indicates Entry Latency is not reported.	nvme_id_psd
+exlat	Exit Latency indicates the maximum latency in microseconds associated with exiting this power state. A value of 0 indicates Exit Latency is not reported.	nvme_id_psd
+rrt	Relative Read Throughput indicates the read throughput rank associated with this power state relative to others. The value in this is less than the number of supported power states.	nvme_id_psd
+rrl	Relative Read Latency indicates the read latency rank associated with this power state relative to others. The value in this field is less than the number of supported power states.	nvme_id_psd
+rwt	Relative Write Throughput indicates write throughput rank associated with this power state relative to others. The value in this field is less than the number of supported power states	nvme_id_psd
+rwl	Relative Write Latency indicates the write latency rank associated with this power state relative to others. The value in this field is less than the number of supported power states	nvme_id_psd
+idlp	Idle Power indicates the typical power consumed by the NVM subsystem over 30 seconds in this power state when idle.	nvme_id_psd
+ips	Idle Power Scale indicates the scale for struct nvme_id_psd.idlp, see enum nvme_psd_ps for decoding this field.	nvme_id_psd
+rsvd19	Reserved	nvme_id_psd
+actp	Active Power indicates the largest average power consumed by the NVM subsystem over a 10 second period in this power state with the workload indicated in the Active Power Workload field.	nvme_id_psd
+apws	Bits 7-6: Active Power Scale(APS) indicates the scale for the struct nvme_id_psd.actp, see enum nvme_psd_ps for decoding this value. Bits 2-0: Active Power Workload(APW) indicates the workload used to calculate maximum power for this power state. See enum nvme_psd_workload for decoding this field.	nvme_id_psd
+rsvd23	Reserved	nvme_id_psd
+rsvd0	reserved	nvme_id_uuid_list
+entry	UUID list entry	nvme_id_uuid_list
+header	UUID Lists Entry Header	nvme_id_uuid_list_entry
+rsvd1	reserved	nvme_id_uuid_list_entry
+uuid	128-bit Universally Unique Identifier	nvme_id_uuid_list_entry
+entry	LBA range type entry. See struct nvme_lba_range_type_entry	nvme_lba_range_type
+type	Specifies the Type of the LBA range	nvme_lba_range_type_entry
+attributes	Specifies attributes of the LBA range	nvme_lba_range_type_entry
+rsvd2	Reserved	nvme_lba_range_type_entry
+slba	Starting LBA	nvme_lba_range_type_entry
+nlb	Number of Logical Blocks	nvme_lba_range_type_entry
+guid	Unique Identifier	nvme_lba_range_type_entry
+rsvd48	Reserved	nvme_lba_range_type_entry
+rslba	Range Starting LBA	nvme_lba_rd
+rnlb	Range Number of Logical Blocks	nvme_lba_rd
+rsvd12	Reserved	nvme_lba_rd
+nlsd	Number of LBA Status Descriptors	nvme_lba_status
+cmpc	Completion Condition	nvme_lba_status
+rsvd5	Reserved	nvme_lba_status
+descs	LBA status descriptor Entry	nvme_lba_status
+dslba	Descriptor Starting LBA	nvme_lba_status_desc
+nlb	Number of Logical Blocks	nvme_lba_status_desc
+rsvd12	Reserved	nvme_lba_status_desc
+status	Additional status about this LBA range	nvme_lba_status_desc
+rsvd14	Reserved	nvme_lba_status_desc
+lslplen	LBA Status Log Page Length	nvme_lba_status_log
+nlslne	Number of LBA Status Log Namespace Elements	nvme_lba_status_log
+estulb	Estimate of Unrecoverable Logical Blocks	nvme_lba_status_log
+rsvd12	Reserved	nvme_lba_status_log
+lsgc	LBA Status Generation Counter	nvme_lba_status_log
+elements	LBA Status Log Namespace Element List	nvme_lba_status_log
+ms	Metadata Size indicates the number of metadata bytes provided per LBA based on the LBA Data Size indicated.	nvme_lbaf
+ds	LBA Data Size indicates the LBA data size supported, reported as a power of two.	nvme_lbaf
+rp	Relative Performance, see enum nvme_lbaf_rp.	nvme_lbaf
+neid	Namespace Element Identifier	nvme_lbas_ns_element
+nlrd	Number of LBA Range Descriptors	nvme_lbas_ns_element
+ratype	Recommended Action Type. see enum nvme_lba_status_atype	nvme_lbas_ns_element
+rsvd8	Reserved	nvme_lbas_ns_element
+lba_rd	LBA Range Descriptor	nvme_lbas_ns_element
+muid	Media Unit Identifier	nvme_media_unit_config_desc
+rsvd2	Reserved	nvme_media_unit_config_desc
+mudl	Media Unit Descriptor Length	nvme_media_unit_config_desc
+muid	Media Unit Identifier	nvme_media_unit_stat_desc
+domainid	Domain Identifier	nvme_media_unit_stat_desc
+endgid	Endurance Group Identifier	nvme_media_unit_stat_desc
+nvmsetid	NVM Set Identifier	nvme_media_unit_stat_desc
+avl_spare	Available Spare	nvme_media_unit_stat_desc
+mucs	Number of Channels attached to media units	nvme_media_unit_stat_desc
+cio	Channel Identifiers Offset	nvme_media_unit_stat_desc
+nmu	Number unit status descriptor	nvme_media_unit_stat_log
+cchans	Number of Channels	nvme_media_unit_stat_log
+sel_config	Selected Configuration	nvme_media_unit_stat_log
+rsvd6	Reserved	nvme_media_unit_stat_log
+mus_desc	Media unit statistic descriptors	nvme_media_unit_stat_log
+type	Element Type (ET)	nvme_metadata_element_desc
+rev	Element Revision (ER)	nvme_metadata_element_desc
+len	Element Length (ELEN)	nvme_metadata_element_desc
+val	Element Value (EVAL), UTF-8 string	nvme_metadata_element_desc
+hdr	Generic MI message header	nvme_mi_admin_req_hdr
+opcode	Admin command opcode (using enum nvme_admin_opcode)	nvme_mi_admin_req_hdr
+flags	Command Flags, indicating dlen and doff validity; Only defined in NVMe-MI version 1.1, no fields defined in 1.2 (where the dlen/doff are always considered valid).	nvme_mi_admin_req_hdr
+ctrl_id	Controller ID target of command	nvme_mi_admin_req_hdr
+cdw1	Submission Queue Entry doubleword 1	nvme_mi_admin_req_hdr
+cdw2	Submission Queue Entry doubleword 2	nvme_mi_admin_req_hdr
+cdw3	Submission Queue Entry doubleword 3	nvme_mi_admin_req_hdr
+cdw4	Submission Queue Entry doubleword 4	nvme_mi_admin_req_hdr
+cdw5	Submission Queue Entry doubleword 5	nvme_mi_admin_req_hdr
+doff	Offset of data to return from command	nvme_mi_admin_req_hdr
+dlen	Length of sent/returned data	nvme_mi_admin_req_hdr
+rsvd0	Reserved	nvme_mi_admin_req_hdr
+rsvd1	Reserved	nvme_mi_admin_req_hdr
+cdw10	Submission Queue Entry doubleword 10	nvme_mi_admin_req_hdr
+cdw11	Submission Queue Entry doubleword 11	nvme_mi_admin_req_hdr
+cdw12	Submission Queue Entry doubleword 12	nvme_mi_admin_req_hdr
+cdw13	Submission Queue Entry doubleword 13	nvme_mi_admin_req_hdr
+cdw14	Submission Queue Entry doubleword 14	nvme_mi_admin_req_hdr
+cdw15	Submission Queue Entry doubleword 15	nvme_mi_admin_req_hdr
+Wire	format for Admin command message headers, defined in section 6 of NVMe-MI.	nvme_mi_admin_req_hdr
+hdr	Generic MI message header	nvme_mi_admin_resp_hdr
+status	Generic response code, non-zero on failure	nvme_mi_admin_resp_hdr
+rsvd0	Reserved	nvme_mi_admin_resp_hdr
+cdw0	Completion Queue Entry doubleword 0	nvme_mi_admin_resp_hdr
+cdw1	Completion Queue Entry doubleword 1	nvme_mi_admin_resp_hdr
+cdw3	Completion Queue Entry doubleword 3	nvme_mi_admin_resp_hdr
+pletion	is the generic response format with the three doublewords of comqueue data, plus optional response data.	nvme_mi_admin_resp_hdr
+reserved1	Reserved	nvme_mi_cmd_supported_effects_log
+ctlid	Controller Identifier	nvme_mi_ctrl_health_status
+csts	Controller Status	nvme_mi_ctrl_health_status
+ctemp	Composite Temperature	nvme_mi_ctrl_health_status
+pdlu	Percentage Used	nvme_mi_ctrl_health_status
+spare	Available Spare	nvme_mi_ctrl_health_status
+cwarn	Critical Warning	nvme_mi_ctrl_health_status
+rsvd9	Reserved	nvme_mi_ctrl_health_status
+hdr	generic MI message header	nvme_mi_mi_req_hdr
+opcode	opcode (OPC) for the specific MI command	nvme_mi_mi_req_hdr
+rsvd0	reserved bytes	nvme_mi_mi_req_hdr
+cdw0	Management Request Doubleword 0 command specific usage	nvme_mi_mi_req_hdr
+cdw1	Management Request Doubleword 1 command specific usage	nvme_mi_mi_req_hdr
+Wire	format for MI request message headers, defined in section 5 of NVMe-MI.	nvme_mi_mi_req_hdr
+hdr	generic MI message header	nvme_mi_mi_resp_hdr
+status	generic response status from command; non-zero on failure.	nvme_mi_mi_resp_hdr
+nmresp	NVMe Management Response: command-type-specific response data	nvme_mi_mi_resp_hdr
+Wire	format for MI response message header, defined in section 5 of NVMe-MI.	nvme_mi_mi_resp_hdr
+type	MCTP message type, will always be NVME_MI_MSGTYPE_NVME	nvme_mi_msg_hdr
+nmp	NVMe-MI message parameters (including MI message type)	nvme_mi_msg_hdr
+meb	Management Endpoint Buffer flag; unused for libnvme-mi implementation	nvme_mi_msg_hdr
+rsvd0	currently reserved	nvme_mi_msg_hdr
+section	format shared by both request and response messages, per NVMe-MI 3.1. This is used for all message types, MI and Admin.	nvme_mi_msg_hdr
+hdr	the general request/response message header	nvme_mi_msg_resp
+status	response status value (see enum nvme_mi_resp_status)	nvme_mi_msg_resp
+rsvd0	reserved data, may be defined by specific response	nvme_mi_msg_resp
+will	response will start with one of these; command-specific responses define parts of the reserved data, and may add further fields.	nvme_mi_msg_resp
+nss	NVM Subsystem Status	nvme_mi_nvm_ss_health_status
+sw	Smart Warnings	nvme_mi_nvm_ss_health_status
+ctemp	Composite Temperature	nvme_mi_nvm_ss_health_status
+pdlu	Percentage Drive Life Used	nvme_mi_nvm_ss_health_status
+ccs	Composite Controller Status	nvme_mi_nvm_ss_health_status
+rsvd8	Reserved	nvme_mi_nvm_ss_health_status
+type	Command Type	nvme_mi_osc
+opc	Opcode	nvme_mi_osc
+mps	PCIe Maximum Payload Size	nvme_mi_port_pcie
+sls	PCIe Supported Link Speeds Vector	nvme_mi_port_pcie
+cls	PCIe Current Link Speed	nvme_mi_port_pcie
+mlw	PCIe Maximum Link Width	nvme_mi_port_pcie
+nlw	PCIe Negotiated Link Width	nvme_mi_port_pcie
+pn	PCIe Port Number	nvme_mi_port_pcie
+rsvd14	Reserved	nvme_mi_port_pcie
+vpd_addr	Current VPD SMBus/I2C Address	nvme_mi_port_smb
+mvpd_freq	Maximum VPD Access SMBus/I2C Frequency	nvme_mi_port_smb
+mme_addr	Current Management Endpoint SMBus/I2C Address	nvme_mi_port_smb
+mme_freq	Maximum Management Endpoint SMBus/I2C Frequency	nvme_mi_port_smb
+nvmebm	NVMe Basic Management	nvme_mi_port_smb
+rsvd13	Reserved	nvme_mi_port_smb
+portid	Port Identifier	nvme_mi_read_ctrl_info
+rsvd1	Reserved	nvme_mi_read_ctrl_info
+prii	PCIe Routing ID Information	nvme_mi_read_ctrl_info
+pri	PCIe Routing ID	nvme_mi_read_ctrl_info
+vid	PCI Vendor ID	nvme_mi_read_ctrl_info
+did	PCI Device ID	nvme_mi_read_ctrl_info
+ssvid	PCI Subsystem Vendor ID	nvme_mi_read_ctrl_info
+ssid	PCI Subsystem Device ID	nvme_mi_read_ctrl_info
+rsvd16	Reserved	nvme_mi_read_ctrl_info
+nump	Number of Ports	nvme_mi_read_nvm_ss_info
+mjr	NVMe-MI Major Version Number	nvme_mi_read_nvm_ss_info
+mnr	NVMe-MI Minor Version Number	nvme_mi_read_nvm_ss_info
+rsvd3	Reserved	nvme_mi_read_nvm_ss_info
+portt	Port Type	nvme_mi_read_port_info
+rsvd1	Reserved	nvme_mi_read_port_info
+mmctptus	Maximum MCTP Transmission Unit Size	nvme_mi_read_port_info
+meb	Management Endpoint Buffer Size	nvme_mi_read_port_info
+pcie	PCIe Port Specific Data	nvme_mi_read_port_info
+smb	SMBus Port Specific Data	nvme_mi_read_port_info
+numcmd	Number of Commands	nvme_mi_read_sc_list
+cmds	MEB supported Command Data Structure. See struct nvme_mi_osc	nvme_mi_read_sc_list
+ipmiver	IPMI Format Version Number	nvme_mi_vpd_hdr
+iuaoff	Internal Use Area Starting Offset	nvme_mi_vpd_hdr
+ciaoff	Chassis Info Area Starting Offset	nvme_mi_vpd_hdr
+biaoff	Board Info Area Starting Offset	nvme_mi_vpd_hdr
+piaoff	Product Info Area Starting Offset	nvme_mi_vpd_hdr
+mrioff	MultiRecord Info Area Starting Offset	nvme_mi_vpd_hdr
+rsvd6	Reserved	nvme_mi_vpd_hdr
+chchk	Common Header Checksum	nvme_mi_vpd_hdr
+vpd	Vital Product Data	nvme_mi_vpd_hdr
+type	NVMe Record Type ID	nvme_mi_vpd_mr_common
+rf	Record Format	nvme_mi_vpd_mr_common
+rlen	Record Length	nvme_mi_vpd_mr_common
+rchksum	Record Checksum	nvme_mi_vpd_mr_common
+hchksum	Header Checksum	nvme_mi_vpd_mr_common
+nmra	NVMe MultiRecord Area	nvme_mi_vpd_mr_common
+ppmra	NVMe PCIe Port MultiRecord Area	nvme_mi_vpd_mr_common
+tmra	Topology MultiRecord Area	nvme_mi_vpd_mr_common
+nmravn	NVMe MultiRecord Area Version Number	nvme_mi_vpd_mra
+ff	Form Factor	nvme_mi_vpd_mra
+rsvd7	Reserved	nvme_mi_vpd_mra
+i18vpwr	Initial 1.8 V Power Supply Requirements	nvme_mi_vpd_mra
+m18vpwr	Maximum 1.8 V Power Supply Requirements	nvme_mi_vpd_mra
+i33vpwr	Initial 3.3 V Power Supply Requirements	nvme_mi_vpd_mra
+m33vpwr	Maximum 3.3 V Power Supply Requirements	nvme_mi_vpd_mra
+rsvd17	Reserved	nvme_mi_vpd_mra
+m33vapsr	Maximum 3.3 Vi aux Power Supply Requirements	nvme_mi_vpd_mra
+i5vapsr	Initial 5 V Power Supply Requirements	nvme_mi_vpd_mra
+m5vapsr	Maximum 5 V Power Supply Requirements	nvme_mi_vpd_mra
+i12vapsr	Initial 12 V Power Supply Requirements	nvme_mi_vpd_mra
+m12vapsr	Maximum 12 V Power Supply Requirements	nvme_mi_vpd_mra
+mtl	Maximum Thermal Load	nvme_mi_vpd_mra
+tnvmcap	Total NVM Capacity	nvme_mi_vpd_mra
+rsvd37	Reserved	nvme_mi_vpd_mra
+nppmravn	NVMe PCIe Port MultiRecord Area Version Number	nvme_mi_vpd_ppmra
+pn	PCIe Port Number	nvme_mi_vpd_ppmra
+ppi	Port Information	nvme_mi_vpd_ppmra
+ls	PCIe Link Speed	nvme_mi_vpd_ppmra
+mlw	PCIe Maximum Link Width	nvme_mi_vpd_ppmra
+mctp	MCTP Support	nvme_mi_vpd_ppmra
+refccap	Ref Clk Capability	nvme_mi_vpd_ppmra
+pi	Port Identifier	nvme_mi_vpd_ppmra
+rsvd13	Reserved	nvme_mi_vpd_ppmra
+type	Type of the Element Descriptor	nvme_mi_vpd_telem
+rev	Revision of the Element Descriptor	nvme_mi_vpd_telem
+len	Number of bytes in the Element Descriptor	nvme_mi_vpd_telem
+data	Type-specific information associated with the Element Descriptor	nvme_mi_vpd_telem
+vn	Version Number	nvme_mi_vpd_tra
+rsvd6	Reserved	nvme_mi_vpd_tra
+ec	Element Count	nvme_mi_vpd_tra
+elems	Element Descriptor	nvme_mi_vpd_tra
+nidt	Namespace Identifier Type, see enum nvme_ns_id_desc_nidt	nvme_ns_id_desc
+nidl	Namespace Identifier Length contains the length in bytes of the struct nvme_id_ns.nid.	nvme_ns_id_desc
+rsvd	Reserved	nvme_ns_id_desc
+nid	Namespace Identifier contains a value that is globally unique and assigned to the namespace when the namespace is created. The length is defined in struct nvme_id_ns.nidl.	nvme_ns_id_desc
+ns	Namespace Identifier	nvme_ns_list
+rsvd2	Reserved	nvme_nss_hw_err_event
+lbstm	Logical Block Storage Tag Mask	nvme_nvm_id_ns
+pic	Protection Information Capabilities	nvme_nvm_id_ns
+rsvd9	Reserved	nvme_nvm_id_ns
+elbaf	List of Extended LBA Format Support	nvme_nvm_id_ns
+rsvd268	Reserved	nvme_nvm_id_ns
+nvmsetid	NVM Set Identifier	nvme_nvmset_attr
+endgid	Endurance Group Identifier	nvme_nvmset_attr
+rsvd4	Reserved	nvme_nvmset_attr
+rr4kt	Random 4 KiB Read Typical indicates the typical time to complete a 4 KiB random read in 100 nanosecond units when the NVM Set is in a Predictable Latency Mode Deterministic Window and there is 1 outstanding command per NVM Set.	nvme_nvmset_attr
+ows	Optimal Write Size	nvme_nvmset_attr
+tnvmsetcap	Total NVM Set Capacity	nvme_nvmset_attr
+unvmsetcap	Unallocated NVM Set Capacity	nvme_nvmset_attr
+rsvd48	Reserved	nvme_nvmset_attr
+status	Status	nvme_nvmset_predictable_lat_log
+rsvd1	Reserved	nvme_nvmset_predictable_lat_log
+event_type	Event Type	nvme_nvmset_predictable_lat_log
+rsvd4	Reserved	nvme_nvmset_predictable_lat_log
+dtwin_rt	DTWIN Reads Typical	nvme_nvmset_predictable_lat_log
+dtwin_wt	DTWIN Writes Typical	nvme_nvmset_predictable_lat_log
+dtwin_tmax	DTWIN Time Maximum	nvme_nvmset_predictable_lat_log
+rsvd72	Reserved	nvme_nvmset_predictable_lat_log
+dtwin_re	DTWIN Reads Estimate	nvme_nvmset_predictable_lat_log
+dtwin_we	DTWIN Writes Estimate	nvme_nvmset_predictable_lat_log
+dtwin_te	DTWIN Time Estimate	nvme_nvmset_predictable_lat_log
+rsvd152	Reserved	nvme_nvmset_predictable_lat_log
+opcode	Operation code, see enum nvme_io_opcodes and enum nvme_admin_opcodes	nvme_passthru_cmd
+flags	Not supported: intended for command flags (eg: SGL, FUSE)	nvme_passthru_cmd
+rsvd1	Reserved for future use	nvme_passthru_cmd
+nsid	Namespace Identifier, or Fabrics type	nvme_passthru_cmd
+cdw2	Command Dword 2 (no spec defined use)	nvme_passthru_cmd
+cdw3	Command Dword 3 (no spec defined use)	nvme_passthru_cmd
+metadata	User space address to metadata buffer (NULL if not used)	nvme_passthru_cmd
+addr	User space address to data buffer (NULL if not used)	nvme_passthru_cmd
+data_len	Data buffer transfer length	nvme_passthru_cmd
+cdw10	Command Dword 10 (command specific)	nvme_passthru_cmd
+cdw11	Command Dword 11 (command specific)	nvme_passthru_cmd
+cdw12	Command Dword 12 (command specific)	nvme_passthru_cmd
+cdw13	Command Dword 13 (command specific)	nvme_passthru_cmd
+cdw14	Command Dword 14 (command specific)	nvme_passthru_cmd
+cdw15	Command Dword 15 (command specific)	nvme_passthru_cmd
+timeout_ms	If non-zero, overrides system default timeout in milliseconds	nvme_passthru_cmd
+result	Set on completion to the command's CQE DWORD 0 controller response	nvme_passthru_cmd
+opcode	Operation code, see enum nvme_io_opcodes and enum nvme_admin_opcodes	nvme_passthru_cmd64
+flags	Not supported: intended for command flags (eg: SGL, FUSE)	nvme_passthru_cmd64
+rsvd1	Reserved for future use	nvme_passthru_cmd64
+nsid	Namespace Identifier, or Fabrics type	nvme_passthru_cmd64
+cdw2	Command Dword 2 (no spec defined use)	nvme_passthru_cmd64
+cdw3	Command Dword 3 (no spec defined use)	nvme_passthru_cmd64
+metadata	User space address to metadata buffer (NULL if not used)	nvme_passthru_cmd64
+addr	User space address to data buffer (NULL if not used)	nvme_passthru_cmd64
+data_len	Data buffer transfer length	nvme_passthru_cmd64
+cdw10	Command Dword 10 (command specific)	nvme_passthru_cmd64
+cdw11	Command Dword 11 (command specific)	nvme_passthru_cmd64
+cdw12	Command Dword 12 (command specific)	nvme_passthru_cmd64
+cdw13	Command Dword 13 (command specific)	nvme_passthru_cmd64
+cdw14	Command Dword 14 (command specific)	nvme_passthru_cmd64
+cdw15	Command Dword 15 (command specific)	nvme_passthru_cmd64
+timeout_ms	If non-zero, overrides system default timeout in milliseconds	nvme_passthru_cmd64
+rsvd2	Reserved for future use (and fills an implicit struct pad	nvme_passthru_cmd64
+result	Set on completion to the command's CQE DWORD 0-1 controller response	nvme_passthru_cmd64
+etype	Event Type	nvme_persistent_event_entry
+etype_rev	Event Type Revision	nvme_persistent_event_entry
+ehl	Event Header Length	nvme_persistent_event_entry
+ehai	Event Header Additional Info	nvme_persistent_event_entry
+cntlid	Controller Identifier	nvme_persistent_event_entry
+ets	Event Timestamp	nvme_persistent_event_entry
+pelpid	Port Identifier	nvme_persistent_event_entry
+rsvd16	Reserved	nvme_persistent_event_entry
+vsil	Vendor Specific Information Length	nvme_persistent_event_entry
+el	Event Length	nvme_persistent_event_entry
+lid	Log Identifier	nvme_persistent_event_log
+rsvd1	Reserved	nvme_persistent_event_log
+tnev	Total Number of Events	nvme_persistent_event_log
+tll	Total Log Length	nvme_persistent_event_log
+rv	Log Revision	nvme_persistent_event_log
+rsvd17	Reserved	nvme_persistent_event_log
+lhl	Log Header Length	nvme_persistent_event_log
+ts	Timestamp	nvme_persistent_event_log
+poh	Power on Hours	nvme_persistent_event_log
+pcc	Power Cycle Count	nvme_persistent_event_log
+vid	PCI Vendor ID	nvme_persistent_event_log
+ssvid	PCI Subsystem Vendor ID	nvme_persistent_event_log
+sn	Serial Number	nvme_persistent_event_log
+mn	Model Number	nvme_persistent_event_log
+subnqn	NVM Subsystem NVMe Qualified Name	nvme_persistent_event_log
+gen_number	Generation Number	nvme_persistent_event_log
+rci	Reporting Context Information	nvme_persistent_event_log
+rsvd378	Reserved	nvme_persistent_event_log
+seb	Supported Events Bitmap	nvme_persistent_event_log
+ee	Enable Event	nvme_plm_config
+rsvd2	Reserved	nvme_plm_config
+dtwinrt	DTWIN Reads Threshold	nvme_plm_config
+dtwinwt	DTWIN Writes Threshold	nvme_plm_config
+dtwintt	DTWIN Time Threshold	nvme_plm_config
+rsvd56	Reserved	nvme_plm_config
+cid	Controller ID	nvme_power_on_reset_info_list
+fw_act	Firmware Activation	nvme_power_on_reset_info_list
+op_in_prog	Operation in Progress	nvme_power_on_reset_info_list
+rsvd4	Reserved	nvme_power_on_reset_info_list
+cntlid	Controller Identifier	nvme_primary_ctrl_cap
+portid	Port Identifier	nvme_primary_ctrl_cap
+crt	Controller Resource Types	nvme_primary_ctrl_cap
+rsvd5	reserved	nvme_primary_ctrl_cap
+vqfrt	VQ Resources Flexible Total	nvme_primary_ctrl_cap
+vqrfa	VQ Resources Flexible Assigned	nvme_primary_ctrl_cap
+vqrfap	VQ Resources Flexible Allocated to Primary	nvme_primary_ctrl_cap
+vqprt	VQ Resources Private Total	nvme_primary_ctrl_cap
+vqfrsm	VQ Resources Flexible Secondary Maximum	nvme_primary_ctrl_cap
+vqgran	VQ Flexible Resource Preferred Granularity	nvme_primary_ctrl_cap
+rsvd48	reserved	nvme_primary_ctrl_cap
+vifrt	VI Resources Flexible Total	nvme_primary_ctrl_cap
+virfa	VI Resources Flexible Assigned	nvme_primary_ctrl_cap
+virfap	VI Resources Flexible Allocated to Primary	nvme_primary_ctrl_cap
+viprt	VI Resources Private Total	nvme_primary_ctrl_cap
+vifrsm	VI Resources Flexible Secondary Maximum	nvme_primary_ctrl_cap
+vigran	VI Flexible Resource Preferred Granularity	nvme_primary_ctrl_cap
+rsvd80	reserved	nvme_primary_ctrl_cap
+cntlid	Controller ID	nvme_registered_ctrl
+rcsts	Reservation Status	nvme_registered_ctrl
+rsvd3	Reserved	nvme_registered_ctrl
+hostid	Host Identifier	nvme_registered_ctrl
+rkey	Reservation Key	nvme_registered_ctrl
+cntlid	Controller ID	nvme_registered_ctrl_ext
+rcsts	Reservation Status	nvme_registered_ctrl_ext
+rsvd3	Reserved	nvme_registered_ctrl_ext
+rkey	Reservation Key	nvme_registered_ctrl_ext
+hostid	Host Identifier	nvme_registered_ctrl_ext
+rsvd32	Reserved	nvme_registered_ctrl_ext
+lpc	Log Page Count	nvme_resv_notification_log
+rnlpt	See enum nvme_resv_notify_rnlpt.	nvme_resv_notification_log
+nalp	Number of Available Log Pages	nvme_resv_notification_log
+rsvd9	Reserved	nvme_resv_notification_log
+nsid	Namespace ID	nvme_resv_notification_log
+rsvd16	Reserved	nvme_resv_notification_log
+gen	Generation	nvme_resv_status
+rtype	Reservation Type	nvme_resv_status
+regctl	Number of Registered Controllers	nvme_resv_status
+rsvd7	Reserved	nvme_resv_status
+ptpls	Persist Through Power Loss State	nvme_resv_status
+rsvd10	Reserved	nvme_resv_status
+rsvd24	Reserved	nvme_resv_status
+regctl_eds	Registered Controller Extended Data Structure	nvme_resv_status
+regctl_ds	Registered Controller Data Structure	nvme_resv_status
+sani_prog	Sanitize Progress	nvme_sanitize_compln_event
+sani_status	Sanitize Status	nvme_sanitize_compln_event
+cmpln_info	Completion Information	nvme_sanitize_compln_event
+rsvd6	Reserved	nvme_sanitize_compln_event
+sprog	Sanitize Progress (SPROG): indicates the fraction complete of the sanitize operation. The value is a numerator of the fraction complete that has 65,536 (10000h) as its denominator. This value shall be set to FFFFh if the sstat field is not set to NVME_SANITIZE_SSTAT_STATUS_IN_PROGESS.	nvme_sanitize_log_page
+sstat	Sanitize Status (SSTAT): indicates the status associated with the most recent sanitize operation. See enum nvme_sanitize_sstat.	nvme_sanitize_log_page
+scdw10	Sanitize Command Dword 10 Information (SCDW10): contains the value of the Command Dword 10 field of the Sanitize command that started the sanitize operation.	nvme_sanitize_log_page
+eto	Estimated Time For Overwrite: indicates the number of seconds required to complete an Overwrite sanitize operation with 16 passes in the background when the No-Deallocate Modifies Media After Sanitize field is not set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+etbe	Estimated Time For Block Erase: indicates the number of seconds required to complete a Block Erase sanitize operation in the background when the No-Deallocate Modifies Media After Sanitize field is not set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+etce	Estimated Time For Crypto Erase: indicates the number of seconds required to complete a Crypto Erase sanitize operation in the background when the No-Deallocate Modifies Media After Sanitize field is not set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+etond	Estimated Time For Overwrite With No-Deallocate Media Modification: indicates the number of seconds required to complete an Overwrite sanitize operation and the associated additional media modification after the Overwrite sanitize operation in the background when the No-Deallocate After Sanitize bit was set to 1 in the Sanitize command that requested the Overwrite sanitize operation; and the No-Deallocate Modifies Media After Sanitize field is set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+etbend	Estimated Time For Block Erase With No-Deallocate Media Modification: indicates the number of seconds required to complete a Block Erase sanitize operation and the associated additional media modification after the Block Erase sanitize operation in the background when the No-Deallocate After Sanitize bit was set to 1 in the Sanitize command that requested the Overwrite sanitize operation; and the No-Deallocate Modifies Media After Sanitize field is set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+etcend	Estimated Time For Crypto Erase With No-Deallocate Media Modification: indicates the number of seconds required to complete a Crypto Erase sanitize operation and the associated additional media modification after the Crypto Erase sanitize operation in the background when the No-Deallocate After Sanitize bit was set to 1 in the Sanitize command that requested the Overwrite sanitize operation; and the No-Deallocate Modifies Media After Sanitize field is set to 10b. A value of 0h indicates that the sanitize operation is expected to be completed in the background when the Sanitize command that started that operation is completed. A value of FFFFFFFFh indicates that no time period is reported.	nvme_sanitize_log_page
+rsvd32	Reserved	nvme_sanitize_log_page
+sani_cap	SANICAP	nvme_sanitize_start_event
+sani_cdw10	Sanitize CDW10	nvme_sanitize_start_event
+sani_cdw11	Sanitize CDW11	nvme_sanitize_start_event
+scid	Secondary Controller Identifier	nvme_secondary_ctrl
+pcid	Primary Controller Identifier	nvme_secondary_ctrl
+scs	Secondary Controller State	nvme_secondary_ctrl
+rsvd5	Reserved	nvme_secondary_ctrl
+vfn	Virtual Function Number	nvme_secondary_ctrl
+nvq	Number of VQ Flexible Resources Assigned	nvme_secondary_ctrl
+nvi	Number of VI Flexible Resources Assigned	nvme_secondary_ctrl
+rsvd14	Reserved	nvme_secondary_ctrl
+num	Number of Identifiers	nvme_secondary_ctrl_list
+rsvd	Reserved	nvme_secondary_ctrl_list
+sc_entry	Secondary Controller Entry	nvme_secondary_ctrl_list
+completion	Current Device Self-Test Completion: indicates the percentage of the device self-test operation that is complete (e.g., a value of 25 indicates that 25% of the device selftest operation is complete and 75% remains to be tested). If the current_operation field is cleared to #NVME_ST_CURR_OP_NOT_RUNNING (indicating there is no device self-test operation in progress), then this field is ignored.	nvme_self_test_log
+rsvd	Reserved	nvme_self_test_log
+result	Self-test Result Data Structures, see struct nvme_st_result.	nvme_self_test_log
+layout	Set Feature Event Layout	nvme_set_feature_event
+cdw_mem	Command Dwords Memory buffer	nvme_set_feature_event
+temperature	Composite Temperature: Contains a value corresponding to a temperature in Kelvins that represents the current composite temperature of the controller and namespace(s) associated with that controller. The manner in which this value is computed is implementation specific and may not represent the actual temperature of any physical point in the NVM subsystem. Warning and critical overheating composite temperature threshold values are reported by the WCTEMP and CCTEMP fields in the Identify Controller data structure.	nvme_smart_log
+avail_spare	Available Spare: Contains a normalized percentage (0% to 100%) of the remaining spare capacity available.	nvme_smart_log
+rsvd7	Reserved	nvme_smart_log
+host_reads	Host Read Commands: Contains the number of read commands completed by the controller. For the NVM command set, this value is the sum of the number of Compare commands and the number of Read commands.	nvme_smart_log
+host_writes	Host Write Commands: Contains the number of write commands completed by the controller. For the NVM command set, this is the number of Write commands.	nvme_smart_log
+temp_sensor	Temperature Sensor 1-8: Contains the current temperature in degrees Kelvin reported by temperature sensors 1-8. The physical point in the NVM subsystem whose temperature is reported by the temperature sensor and the temperature accuracy is implementation specific. An implementation that does not implement the temperature sensor reports a value of 0h.	nvme_smart_log
+rsvd232	Reserved	nvme_smart_log
+dsts	Device Self-test Status: Indicates the device self-test code and the status of the operation (see enum nvme_status_result and enum nvme_st_code).	nvme_st_result
+seg	Segment Number: Iindicates the segment number where the first self-test failure occurred. If Device Self-test Status (dsts) is not set to #NVME_ST_RESULT_KNOWN_SEG_FAIL, then this field should be ignored.	nvme_st_result
+vdi	Valid Diagnostic Information: Indicates the diagnostic failure information that is reported. See enum nvme_st_valid_diag_info.	nvme_st_result
+rsvd	Reserved	nvme_st_result
+poh	Power On Hours (POH): Indicates the number of power-on hours at the time the device self-test operation was completed or aborted. This does not include time that the controller was powered and in a low power state condition.	nvme_st_result
+nsid	Namespace Identifier (NSID): Indicates the namespace that the Failing LBA occurred on. Valid only when the NSID Valid bit (#NVME_ST_VALID_DIAG_INFO_NSID) is set in the Valid Diagnostic Information (vdi) field.	nvme_st_result
+flba	Failing LBA: indicates the LBA of the logical block that caused the test to fail. If the device encountered more than one failed logical block during the test, then this field only indicates one of those failed logical blocks. Valid only when the NSID Valid bit (#NVME_ST_VALID_DIAG_INFO_FLBA) is set in the Valid Diagnostic Information (vdi) field.	nvme_st_result
+sct	Status Code Type: This field may contain additional information related to errors or conditions. Bits 2:0 may contain additional information relating to errors or conditions that occurred during the device self-test operation represented in the same format used in the Status Code Type field of the completion queue entry (refer to enum nvme_status_field). Valid only when the NSID Valid bit (#NVME_ST_VALID_DIAG_INFO_SCT) is set in the Valid Diagnostic Information (vdi) field.	nvme_st_result
+sc	Status Code: This field may contain additional information relating to errors or conditions that occurred during the device self-test operation represented in the same format used in the Status Code field of the completion queue entry. Valid only when the SCT Valid bit (#NVME_ST_VALID_DIAG_INFO_SC) is set in the Valid Diagnostic Information (vdi) field.	nvme_st_result
+vs	Vendor Specific.	nvme_st_result
+msl	Max Streams Limit	nvme_streams_directive_params
+nssa	NVM Subsystem Streams Available	nvme_streams_directive_params
+nsso	NVM Subsystem Streams Open	nvme_streams_directive_params
+nssc	NVM Subsystem Stream Capability	nvme_streams_directive_params
+rsvd	Reserved	nvme_streams_directive_params
+sws	Stream Write Size	nvme_streams_directive_params
+sgs	Stream Granularity Size	nvme_streams_directive_params
+nsa	Namespace Streams Allocated	nvme_streams_directive_params
+nso	Namespace Streams Open	nvme_streams_directive_params
+rsvd2	Reserved	nvme_streams_directive_params
+osc	Open Stream Count	nvme_streams_directive_status
+sid	Stream Identifier	nvme_streams_directive_status
+sccn	Number of capacity configuration	nvme_supported_cap_config_list_log
+rsvd1	Reserved	nvme_supported_cap_config_list_log
+lid_support	Log Page Identifier Supported	nvme_supported_log_pages
+Supported	Log Pages (Log Identifier 00h)	nvme_supported_log_pages
+lpi	Log Identifier, either NVME_LOG_LID_TELEMETRY_HOST or NVME_LOG_LID_TELEMETRY_CTRL	nvme_telemetry_log
+rsvd1	Reserved	nvme_telemetry_log
+ieee	IEEE OUI Identifier is the Organization Unique Identifier (OUI) for the controller vendor that is able to interpret the data.	nvme_telemetry_log
+dalb1	Telemetry Controller-Initiated Data Area 1 Last Block is the value of the last block in this area.	nvme_telemetry_log
+dalb2	Telemetry Controller-Initiated Data Area 1 Last Block is the value of the last block in this area.	nvme_telemetry_log
+dalb3	Telemetry Controller-Initiated Data Area 1 Last Block is the value of the last block in this area.	nvme_telemetry_log
+rsvd14	Reserved	nvme_telemetry_log
+dalb4	Telemetry Controller-Initiated Data Area 4 Last Block is the value of the last block in this area.	nvme_telemetry_log
+rsvd20	Reserved	nvme_telemetry_log
+hostdgn	Telemetry Host-Initiated Data Generation Number is a value that is incremented each time the host initiates a capture of its internal controller state in the controller .	nvme_telemetry_log
+ctrlavail	Telemetry Controller-Initiated Data Available, if cleared, then the controller telemetry log does not contain saved internal controller state. If this field is set to 1h, the controller log contains saved internal controller state. If this field is set to 1h, the data will be latched until the host releases it by reading the log with RAE cleared.	nvme_telemetry_log
+ctrldgn	Telemetry Controller-Initiated Data Generation Number is a value that is incremented each time the controller initiates a capture of its internal controller state in the controller .	nvme_telemetry_log
+rsnident	Reason Identifiers a vendor specific identifier that describes the operating conditions of the controller at the time of capture.	nvme_telemetry_log
+data_area	Telemetry data blocks, vendor specific information data.	nvme_telemetry_log
+controllers	log consists of a header describing the log and zero or more Data Blocks. All Telemetry Data Blocks are 512 bytes, in size. This log captures the internal state.	nvme_telemetry_log
+over_temp	Over Temperature	nvme_thermal_exc_event
+threshold	temperature threshold	nvme_thermal_exc_event
+timestamp	Timestamp value based on origin and synch field	nvme_timestamp
+attr	Attribute	nvme_timestamp
+rsvd	Reserved	nvme_timestamp
+opcode	Operation code, see enum nvme_io_opcodes and enum nvme_admin_opcodes	nvme_uring_cmd
+flags	Not supported: intended for command flags (eg: SGL, FUSE)	nvme_uring_cmd
+rsvd1	Reserved for future use	nvme_uring_cmd
+nsid	Namespace Identifier, or Fabrics type	nvme_uring_cmd
+cdw2	Command Dword 2 (no spec defined use)	nvme_uring_cmd
+cdw3	Command Dword 3 (no spec defined use)	nvme_uring_cmd
+metadata	User space address to metadata buffer (NULL if not used)	nvme_uring_cmd
+addr	User space address to data buffer (NULL if not used)	nvme_uring_cmd
+data_len	Data buffer transfer length	nvme_uring_cmd
+cdw10	Command Dword 10 (command specific)	nvme_uring_cmd
+cdw11	Command Dword 11 (command specific)	nvme_uring_cmd
+cdw12	Command Dword 12 (command specific)	nvme_uring_cmd
+cdw13	Command Dword 13 (command specific)	nvme_uring_cmd
+cdw14	Command Dword 14 (command specific)	nvme_uring_cmd
+cdw15	Command Dword 15 (command specific)	nvme_uring_cmd
+timeout_ms	If non-zero, overrides system default timeout in milliseconds	nvme_uring_cmd
+rsvd2	Reserved for future use (and fills an implicit struct pad	nvme_uring_cmd
+nrzid	Number of Zone Identifiers	nvme_zns_changed_zone_log
+rsvd2	Reserved	nvme_zns_changed_zone_log
+zid	Zone Identifier	nvme_zns_changed_zone_log
+zt	Zone Type	nvme_zns_desc
+zs	Zone State	nvme_zns_desc
+za	Zone Attributes	nvme_zns_desc
+zai	Zone Attributes Information	nvme_zns_desc
+rsvd4	Reserved	nvme_zns_desc
+zcap	Zone Capacity	nvme_zns_desc
+zslba	Zone Start Logical Block Address	nvme_zns_desc
+wp	Write Pointer	nvme_zns_desc
+rsvd32	Reserved	nvme_zns_desc
+zasl	Zone Append Size Limit	nvme_zns_id_ctrl
+rsvd1	Reserved	nvme_zns_id_ctrl
+zoc	Zone Operation Characteristics	nvme_zns_id_ns
+ozcs	Optional Zoned Command Support	nvme_zns_id_ns
+mar	Maximum Active Resources	nvme_zns_id_ns
+mor	Maximum Open Resources	nvme_zns_id_ns
+rrl	Reset Recommended Limit	nvme_zns_id_ns
+frl	Finish Recommended Limit	nvme_zns_id_ns
+rrl1	Reset Recommended Limit 1	nvme_zns_id_ns
+rrl2	Reset Recommended Limit 2	nvme_zns_id_ns
+rrl3	Reset Recommended Limit 3	nvme_zns_id_ns
+frl1	Finish Recommended Limit 1	nvme_zns_id_ns
+frl2	Finish Recommended Limit 2	nvme_zns_id_ns
+frl3	Finish Recommended Limit 3	nvme_zns_id_ns
+numzrwa	Number of ZRWA Resources	nvme_zns_id_ns
+zrwafg	ZRWA Flush Granularity	nvme_zns_id_ns
+zrwasz	ZRWA Size	nvme_zns_id_ns
+zrwacap	ZRWA Capability	nvme_zns_id_ns
+rsvd53	Reserved	nvme_zns_id_ns
+lbafe	LBA Format Extension	nvme_zns_id_ns
+vs	Vendor Specific	nvme_zns_id_ns
+zsze	Zone Size	nvme_zns_lbafe
+zdes	Zone Descriptor Extension Size	nvme_zns_lbafe
+rsvd9	reserved	nvme_zns_lbafe
+nr_zones	Number of descriptors in entries	nvme_zone_report
+rsvd8	Reserved	nvme_zone_report
+entries	Zoned namespace descriptors	nvme_zone_report
